@@ -1,0 +1,736 @@
+/* Reset des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: #f5f6fa; /* Fond clair institutionnel */
+    color: #34495e;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1a252f; /* Bleu foncé institutionnel */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #f1c40f; /* Or discret */
+}
+
+/* Header */
+.header {
+    background-color: #2c3e50; /* Bleu profond */
+    color: #ecf0f1;
+    text-align: center;
+    padding: 80px 20px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header-content p {
+    font-size: 1.4rem;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    color: #bdc3c7; /* Argent métallique */
+}
+
+.header-content .cta-button {
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    background-color: #f1c40f;
+    border: 2px solid #f1c40f;
+}
+
+.header-content .cta-button:hover {
+    background-color: #d4a017;
+    border-color: #d4a017;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sections */
+.section {
+    padding: 100px 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+.section h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #f1c40f;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Avant / Après */
+.before-after {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.before, .after {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.before:hover, .after:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.before h3, .after h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.before h3 span, .after h3 span {
+    font-size: 1.8rem;
+}
+
+.before h3 span {
+    color: #e74c3c; /* Rouge pour "Avant" */
+}
+
+.after h3 span {
+    color: #2ecc71; /* Vert pour "Après" */
+}
+
+.before ul, .after ul {
+    list-style: none;
+    text-align: left;
+}
+
+.before ul li, .after ul li {
+    margin-bottom: 15px;
+    color: #34495e;
+    position: relative;
+    padding-left: 25px;
+}
+
+.before ul li::before, .after ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #2ecc71;
+}
+
+.before ul li::before {
+    content: "✖";
+    color: #e74c3c;
+}
+
+/* Cas d’Usage */
+.use-cases {
+    background-color: #f5f6fa;
+}
+
+.use-cases-content {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.use-case-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    transition: transform 0.3s;
+}
+
+.use-case-item:hover {
+    transform: translateY(-5px);
+}
+
+.use-case-item h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.use-case-item p {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.use-case-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Token & NFTs */
+.token-nfts {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.token-section, .nfts-section {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 20px;
+    transition: transform 0.3s;
+}
+
+.token-section:hover, .nfts-section:hover {
+    transform: translateY(-5px);
+}
+
+.token-section h3, .nfts-section h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.token-section p, .nfts-section p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.token-section ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.token-section ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.token-section ul li::before {
+    content: "🔹";
+    position: absolute;
+    left: -20px;
+}
+
+/* Roadmap */
+.roadmap {
+    background-color: #fff;
+}
+
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    position: relative;
+}
+
+.timeline-item {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f5f6fa;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-item h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    color: #34495e;
+    font-size: 1.1rem;
+}
+
+/* Équipe & Partenaires */
+.team-partners {
+    background-color: #f5f6fa;
+}
+
+.team-section, .partners-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    color: #34495e;
+}
+
+.partners-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.partner-logos img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.partner-logos img:hover {
+    transform: scale(1.1);
+}
+
+/* Simulateur */
+.simulator {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+.simulator-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.simulator-form label {
+    font-weight: 600;
+    color: #2c3e50;
+    min-width: 200px;
+}
+
+.simulator-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 150px;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.simulator-form input:focus {
+    border-color: #f1c40f;
+    outline: none;
+}
+
+.simulator-form button {
+    padding: 12px 30px;
+    background-color: #f1c40f;
+    color: #2c3e50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.simulator-form button:hover {
+    background-color: #d4a017;
+}
+
+.simulator p {
+    font-size: 1.3rem;
+    color: #34495e;
+    margin-top: 20px;
+}
+
+/* Prix en Temps Réel */
+.crypto-prices {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 40px;
+}
+
+.crypto-prices h2 {
+    margin-bottom: 30px;
+}
+
+.crypto-prices p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Swap */
+.swap {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+.swap select, .swap input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.swap button {
+    padding: 12px 30px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.swap button:hover {
+    background-color: #27ae60;
+}
+
+.swap p {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-top: 20px;
+}
+
+/* Investisseurs */
+.investors {
+    background-color: #f5f6fa;
+}
+
+.investor-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #f1c40f;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    min-width: 220px;
+    text-align: center;
+    white-space: nowrap;
+    border: 2px solid #f1c40f;
+}
+
+.cta-button:hover {
+    background-color: #d4a017;
+    border-color: #d4a017;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(241, 196, 15, 0.5);
+}
+
+/* Restez Informé */
+.stay-informed {
+    background-color: #1a252f;
+    color: #ecf0f1;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.stay-informed p {
+    margin-bottom: 30px;
+    color: #bdc3c7;
+}
+
+.stay-informed-actions {
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #0f1a24; /* Bleu très foncé */
+    color: #ecf0f1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #f1c40f;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #d4a017;
+}
+
+.footer-contact p {
+    margin: 0;
+    color: #bdc3c7;
+}
+
+.footer-contact a {
+    color: #f1c40f;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+    color: #d4a017;
+}
+
+.back-to-top {
+    display: block;
+    margin-top: 15px;
+    color: #f1c40f;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.back-to-top:hover {
+    color: #d4a017;
+}
+
+/* Modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #f1c40f;
+}
+
+.modal-content h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #34495e;
+    transition: border-color 0.3s;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f1c40f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(241, 196, 15, 0.3);
+}
+
+/* Styles pour le message de confirmation */
+#form-message.success {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 5px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#form-message.error {
+    background-color: #ffebee;
+    padding: 15px;
+    border-radius: 5px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .header-content p {
+        font-size: 1.1rem;
+    }
+
+    .section h2 {
+        font-size: 2.2rem;
+    }
+
+    .before-after, .use-cases-content, .token-section, .nfts-section, .timeline, .team-section, .partners-section, .simulator-form, .crypto-prices, .swap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .simulator-form input, .swap input {
+        width: 200px;
+    }
+
+    .cta-button {
+        min-width: 180px;
+        padding: 12px 25px;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        max-width: 90%;
+        padding: 20px;
+    }
+}
