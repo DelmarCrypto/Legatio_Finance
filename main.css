@@ -388,13 +388,21 @@ body {
     margin-top: 20px;
 }
 
-.tokenization-schema {
-    margin-top: 40px;
+.tokenization-schema svg rect {
+    transition: transform 0.3s ease;
 }
 
-.tokenization-schema svg {
-    max-width: 100%;
-    height: auto;
+.tokenization-schema svg rect:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.tokenization-schema svg path {
+    transition: stroke-width 0.3s ease;
+}
+
+.tokenization-schema svg path:hover {
+    stroke-width: 4;
 }
 
 @media (max-width: 768px) {
