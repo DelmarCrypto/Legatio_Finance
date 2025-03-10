@@ -447,12 +447,12 @@ body {
     font-size: 1.1rem;
 }
 
-/* Équipe & Partenaires */
-.team-partners {
+/* Équipe */
+.team {
     background-color: #f5f6fa;
 }
 
-.team-section, .partners-section {
+.team-section {
     display: flex;
     gap: 30px;
     justify-content: center;
@@ -480,28 +480,6 @@ body {
 
 .team-member p {
     color: #34495e;
-}
-
-.partners-section h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.partner-logos {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.partner-logos img {
-    max-width: 150px;
-    height: auto;
-    transition: transform 0.3s;
-}
-
-.partner-logos img:hover {
-    transform: scale(1.1);
 }
 
 /* Simulateur */
@@ -708,15 +686,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     margin-top: 20px;
 }
 
 .partner-logos span {
     font-size: 1.5rem;
-    margin-bottom: 10px;
-    display: block;
-    text-align: center;
+    margin-right: 20px;
 }
 
 .partner-logo {
@@ -934,7 +911,7 @@ body {
     .section h2 {
         font-size: 2.2rem;
     }
-    .before-after, .use-cases-content, .token-section, .nfts-section, .timeline, .team-section, .partners-section, .simulator-form, .crypto-prices, .swap {
+    .before-after, .use-cases-content, .token-section, .nfts-section, .timeline, .team-section, .simulator-form, .crypto-prices, .swap {
         flex-direction: column;
         align-items: center;
     }
@@ -965,6 +942,10 @@ body {
     .partner-logos {
         flex-direction: column;
         align-items: center;
+    }
+    .partner-logos span {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 }
 
