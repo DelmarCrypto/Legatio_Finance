@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legatio Finance - Investissement Immobilier Tokenisé</title>
     <meta name="description" content="Legatio Finance : Investissez dans l’immobilier tokenisé dès 100$ avec des rendements passifs en 2025 via la blockchain Arbitrum.">
-    <meta name="keywords" content="immobilier tokenisé, NFTs, staking, prêts crypto, blockchain, Legatio Finance">
+    <meta name="keywords" content="immobilier tokenisé, NFTs, staking, prêts crypto, blockchain, Legatio Finance, ROI, sécurité">
     <meta name="author" content="Legatio Finance Team">
     <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Legatio Finance - L'Avenir de l'Investissement Immobilier">
+    <meta property="og:description" content="Découvrez l'investissement immobilier tokenisé avec Legatio Finance.">
+    <meta property="og:image" content="https://delmarcrypto.github.io/legatio.finance/assets/images/favicon.png">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +18,8 @@
     <link rel="stylesheet" href="main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Google Analytics (remplacez 'UA-XXXXX-Y' par votre ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
     <script>
@@ -45,7 +50,7 @@
             <h1>Legatio Finance</h1>
             <p>L’avenir de l’investissement immobilier tokenisé</p>
             <a href="#investors" class="cta-button" aria-label="Investir maintenant">Investir Maintenant</a>
-            <a href="#use-cases" class="cta-button cta-secondary" aria-label="En savoir plus">En Savoir Plus</a>
+            <a href="#use-cases" class="cta-button cta-secondary" aria-label="Voir les opportunités">Voir les Opportunités</a>
         </div>
     </header>
 
@@ -92,54 +97,74 @@
             </div>
         </div>
 
+        <div class="section why-invest">
+            <h2>Pourquoi Investir avec Legatio ?</h2>
+            <div class="invest-benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>ROI Élevé</h3>
+                    <p>Jusqu’à 7% annuel avec staking.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Sécurité</h3>
+                    <p>Audits CertiK et conformité KYC/AML.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>Transparence</h3>
+                    <p>Basé sur la blockchain Arbitrum.</p>
+                </div>
+            </div>
+        </div>
+
         <div id="use-cases" class="section use-cases">
             <h2>Cas d’Usage</h2>
             <p>Découvrez comment les immeubles tokenisés transforment votre investissement.</p>
             <div class="use-cases-content">
                 <div class="use-case-item">
-                    <h3>Rendements Passifs</h3>
+                    <h3>Rendements Passifs <i class="fas fa-dollar-sign"></i></h3>
                     <p>Les revenus locatifs sont redistribués aux détenteurs de tokens sous forme de dividendes mensuels.</p>
                     <div class="graph-container">
-                        <iframe src="graphique.html#rendement-graph" frameborder="0" title="Graphique des rendements passifs"></iframe>
+                        <iframe src="graphique.html#rendement-graph" frameborder="0" title="Graphique des rendements passifs" alt="Graphique des rendements passifs"></iframe>
                     </div>
-                    <a href="#investors" class="cta-button cta-secondary" aria-label="En savoir plus">En Savoir Plus</a>
+                    <a href="#investors" class="cta-button cta-secondary" aria-label="Voir les opportunités">Voir les Opportunités</a>
                 </div>
                 <div class="use-case-item">
-                    <h3>Collatéral pour Prêts</h3>
+                    <h3>Collatéral pour Prêts <i class="fas fa-shield-alt"></i></h3>
                     <p>Utilisez vos tokens comme garantie pour emprunter des stablecoins à des taux compétitifs.</p>
                     <div class="graph-container">
-                        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" class="collateral-graph">
-                            <!-- Axes -->
+                        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" class="collateral-graph" alt="Graphique des prêts collatéraux">
                             <line x1="50" y1="250" x2="450" y2="250" stroke="black" stroke-width="2"/>
                             <line x1="50" y1="250" x2="50" y2="50" stroke="black" stroke-width="2"/>
-                            
-                            <!-- Lignes de guidage -->
                             <line x1="50" y1="200" x2="450" y2="200" stroke="#ccc" stroke-dasharray="5,5"/>
                             <line x1="50" y1="150" x2="450" y2="150" stroke="#ccc" stroke-dasharray="5,5"/>
                             <line x1="50" y1="100" x2="450" y2="100" stroke="#ccc" stroke-dasharray="5,5"/>
-                            
-                            <!-- Courbe Flux de Collatéral (bleu → #3498db) -->
-                            <path class="collateral-line" d="M50,230 Q100,180 150,190 T250,140 T350,160 T450,120" 
-                                fill="none" stroke="#3498db" stroke-width="3"/>
-                                
-                            <!-- Courbe Rendement (or → #f1c40f) -->
-                            <path class="yield-line" d="M50,220 Q100,160 150,170 T250,130 T350,150 T450,110" 
-                                fill="none" stroke="#f1c40f" stroke-width="3"/>
-                                
-                            <!-- Légende -->
+                            <path class="collateral-line" d="M50,230 Q100,180 150,190 T250,140 T350,160 T450,120" fill="none" stroke="#3498db" stroke-width="3"/>
+                            <path class="yield-line" d="M50,220 Q100,160 150,170 T250,130 T350,150 T450,110" fill="none" stroke="#f1c40f" stroke-width="3"/>
                             <rect x="300" y="20" width="140" height="50" fill="white" stroke="black"/>
                             <circle cx="320" cy="35" r="5" fill="#3498db" class="legend-circle"/>
                             <text x="335" y="38" font-size="12" font-family="'Roboto', sans-serif" fill="#34495e">Flux de Collatéral</text>
                             <circle cx="320" cy="55" r="5" fill="#f1c40f" class="legend-circle"/>
                             <text x="335" y="58" font-size="12" font-family="'Roboto', sans-serif" fill="#34495e">Rendement (%)</text>
-                            
-                            <!-- Labels des axes -->
                             <text x="10" y="150" font-size="14" font-family="'Roboto', sans-serif" fill="black" transform="rotate(-90, 10, 150)">Valeur ($)</text>
                             <text x="225" y="270" font-size="14" font-family="'Roboto', sans-serif" fill="black">Temps</text>
                         </svg>
                     </div>
-                    <a href="#investors" class="cta-button cta-secondary" aria-label="En savoir plus">En Savoir Plus</a>
+                    <a href="#investors" class="cta-button cta-secondary" aria-label="Voir les opportunités">Voir les Opportunités</a>
                 </div>
+            </div>
+            <div class="tokenization-schema">
+                <h3>Comment un bien est tokenisé ?</h3>
+                <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" alt="Schéma de tokenisation immobilière">
+                    <rect x="50" y="50" width="100" height="50" fill="#3498db" />
+                    <text x="100" y="75" text-anchor="middle" fill="white">1. Acquisition</text>
+                    <rect x="200" y="50" width="100" height="50" fill="#3498db" />
+                    <text x="250" y="75" text-anchor="middle" fill="white">2. Tokenisation</text>
+                    <rect x="350" y="50" width="100" height="50" fill="#3498db" />
+                    <text x="400" y="75" text-anchor="middle" fill="white">3. Vente de Tokens</text>
+                    <path d="M150 75 Q175 75 175 100 T200 125 T350 125 T375 100 T400 75" stroke="#f1c40f" fill="none" />
+                </svg>
             </div>
         </div>
 
@@ -160,7 +185,7 @@
                 <h3>NFTs Legatio</h3>
                 <p>Collection "Legatio Genesis" : 1 000 NFTs uniques sur Arbitrum.<br>Prix de Mint : 0.2 ETH<br>Lancement : Q3 2025.</p>
                 <p>Avantages : Frais réduits, accès anticipé, gouvernance.</p>
-                <a href="#investors" class="cta-button cta-secondary" aria-label="En savoir plus">En Savoir Plus</a>
+                <a href="#investors" class="cta-button cta-secondary" aria-label="Voir les opportunités">Voir les Opportunités</a>
             </div>
         </div>
 
@@ -237,6 +262,13 @@
             <p>Résultat : <span id="swapResult">0</span></p>
         </div>
 
+        <div class="section crypto-prices">
+            <h2>Prix en Direct</h2>
+            <p id="btcPrice"></p>
+            <p id="goldPrice"></p>
+            <p id="silverPrice"></p>
+        </div>
+
         <div id="investors" class="section investors">
             <h2>Pour les Investisseurs</h2>
             <p>Explorez notre vision innovante.</p>
@@ -278,7 +310,6 @@
             </div>
             <div class="partner-logos">
                 <span>Nos partenaires</span>
-                <!-- Logo LBank -->
                 <a href="https://www.lbank.com/" target="_blank" aria-label="Logo LBank" alt="Logo LBank">
                     <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" class="partner-logo">
                         <text x="10" y="35" font-family="sans-serif" font-size="20" fill="#0A66C2">L</text>
@@ -287,7 +318,6 @@
                         <text x="40" y="35" font-family="sans-serif" font-size="20" fill="#0A66C2">ank</text>
                     </svg>
                 </a>
-                <!-- Logo Chainlink -->
                 <a href="https://chain.link/" target="_blank" aria-label="Logo Chainlink" alt="Logo Chainlink">
                     <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" class="partner-logo">
                         <polygon points="10,15 25,5 40,15 40,35 25,45 10,35" fill="none" stroke="#375BD2" stroke-width="4"/>
@@ -317,7 +347,12 @@
                 <a href="#faq">FAQ</a> | <a href="https://www.linkedin.com/feed/" target="_blank">Mentions Légales</a>
             </div>
             <div class="footer-contact">
-                <p>Contact : <a href="mailto:legatio.finance@gmail.com">legatio.finance@gmail.com</a> | © 2025 Legatio Finance</p>
+                <p>Contact : <a href="mailto:legatio.finance@gmail.com">legatio.finance@gmail.com</a></p>
+                <form id="quick-contact" action="https://formspree.io/f/mpwpavjj" method="POST">
+                    <input type="email" name="email" placeholder="Votre email" required>
+                    <button type="submit" class="cta-button cta-secondary">Envoyer</button>
+                </form>
+                <p>© 2025 Legatio Finance</p>
             </div>
             <a href="#" class="back-to-top" aria-label="Retour en haut">↑</a>
         </div>
@@ -358,6 +393,8 @@
 
             // Animations GSAP
             gsap.from(".section", { opacity: 0, y: 50, duration: 1, stagger: 0.3, scrollTrigger: { trigger: ".section", start: "top 90%" } });
+            gsap.from(".use-case-item", { opacity: 0, y: 50, duration: 1, stagger: 0.3, scrollTrigger: { trigger: ".use-cases", start: "top 80%" } });
+            gsap.from(".timeline-item", { opacity: 0, y: 50, duration: 1, stagger: 0.2, scrollTrigger: { trigger: ".roadmap", start: "top 80%" } });
 
             const buttons = document.querySelectorAll('.cta-button');
             buttons.forEach(button => {
@@ -372,20 +409,7 @@
                 });
             });
 
-            const carousel = document.querySelector('.testimonial-carousel');
-            if (carousel) {
-                let index = 0;
-                setInterval(() => {
-                    gsap.to(carousel.children[index], { opacity: 0, duration: 0.5 });
-                    index = (index + 1) % carousel.children.length;
-                    gsap.fromTo(carousel.children[index], { opacity: 0 }, { opacity: 1, duration: 0.5 });
-                }, 5000);
-            }
-
-            document.querySelector('.back-to-top').addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
+            // Modal
             const modal = document.getElementById('demo-modal');
             const openModalBtn = document.getElementById('open-demo-modal');
             const closeModalBtn = document.getElementById('close-demo-modal');
@@ -442,76 +466,52 @@
                 }
             });
 
-            gsap.from(".timeline-item", { opacity: 0, y: 50, duration: 1, stagger: 0.2, scrollTrigger: { trigger: ".roadmap", start: "top 80%" } });
-
-            // Fonction pour le simulateur de prêt
+            // Simulateur de prêt
             function calculateLoan() {
-                console.log("calculateLoan appelé");
-                const propertyValue = parseFloat(document.getElementById("propertyValue").value);
-                const loanAmount = parseFloat(document.getElementById("loanAmount").value);
-                const loanDuration = parseFloat(document.getElementById("loanDuration").value);
-                const rate = 0.05; // Taux d'intérêt annuel de 5%
-
-                console.log("Valeurs récupérées:", { propertyValue, loanAmount, loanDuration });
-
-                if (isNaN(propertyValue) || isNaN(loanAmount) || isNaN(loanDuration)) {
-                    console.error("Valeurs invalides détectées");
-                    document.getElementById("loanResult").innerText = "Entrées invalides";
-                    return;
-                }
-
+                const propertyValue = parseFloat(document.getElementById("propertyValue").value) || 0;
+                const loanAmount = parseFloat(document.getElementById("loanAmount").value) || 0;
+                const loanDuration = parseFloat(document.getElementById("loanDuration").value) || 0;
+                const rate = 0.05;
                 if (propertyValue >= loanAmount && loanAmount > 0 && loanDuration > 0) {
                     const interest = loanAmount * rate * (loanDuration / 12);
-                    const total = (loanAmount + interest).toFixed(2);
-                    console.log("Calcul effectué:", { interest, total });
-                    document.getElementById("loanResult").innerText = `${total} USDT`;
+                    document.getElementById("loanResult").innerText = `${(loanAmount + interest).toFixed(2)} USDT`;
                 } else {
-                    console.error("Conditions non remplies pour le calcul");
                     document.getElementById("loanResult").innerText = "Entrées invalides";
                 }
             }
+            document.getElementById("calculateLoanBtn").addEventListener("click", calculateLoan);
 
-            // Fonction pour l'échange RWA ↔ Stablecoins
+            // Échange RWA ↔ Stablecoins
             function swapTokens() {
-                console.log("swapTokens appelé");
-                const amount = parseFloat(document.getElementById("amount").value);
+                const amount = parseFloat(document.getElementById("amount").value) || 0;
                 const toToken = document.getElementById("toToken").value;
-
-                console.log("Valeurs récupérées:", { amount, toToken });
-
-                if (isNaN(amount) || amount <= 0) {
-                    console.error("Montant invalide");
+                if (amount > 0) {
+                    document.getElementById("swapResult").innerText = `${amount.toFixed(2)} ${toToken.toUpperCase()}`;
+                } else {
                     document.getElementById("swapResult").innerText = "Montant invalide";
-                    return;
                 }
-
-                // Conversion 1:1 pour l'exemple (vous pouvez ajuster selon vos besoins)
-                const result = amount.toFixed(2);
-                console.log("Résultat de l'échange:", { result });
-                document.getElementById("swapResult").innerText = `${result} ${toToken.toUpperCase()}`;
             }
+            document.getElementById("swapTokensBtn").addEventListener("click", swapTokens);
 
-            // Ajout des écouteurs d'événements pour les boutons
-            const calculateLoanBtn = document.getElementById("calculateLoanBtn");
-            const swapTokensBtn = document.getElementById("swapTokensBtn");
-
-            if (calculateLoanBtn) {
-                calculateLoanBtn.addEventListener("click", calculateLoan);
-                console.log("Écouteur d'événement ajouté pour calculateLoanBtn");
-            } else {
-                console.error("Bouton calculateLoanBtn non trouvé");
+            // Prix en direct
+            async function fetchPrices() {
+                try {
+                    const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gold,ethereum&vs_currencies=usd');
+                    const data = await response.json();
+                    document.getElementById('btcPrice').textContent = `BTC: $${data.bitcoin.usd}`;
+                    document.getElementById('goldPrice').textContent = `Or: $${data.gold?.usd || 'N/A'}`;
+                    document.getElementById('silverPrice').textContent = `Argent: $${data.ethereum?.usd || 'N/A'}`; // Proxy
+                } catch (error) {
+                    console.error("Erreur lors de la récupération des prix:", error);
+                }
             }
+            setInterval(fetchPrices, 60000);
+            fetchPrices();
 
-            if (swapTokensBtn) {
-                swapTokensBtn.addEventListener("click", swapTokens);
-                console.log("Écouteur d'événement ajouté pour swapTokensBtn");
-            } else {
-                console.error("Bouton swapTokensBtn non trouvé");
-            }
-
-            // Supprimer la fonction fetchPrices si elle n'est pas utilisée
-            // async function fetchPrices() { ... }
-            // fetchPrices(); setInterval(fetchPrices, 60000);
+            // Back to top
+            document.querySelector('.back-to-top').addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
         });
     </script>
 </body>
