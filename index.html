@@ -35,6 +35,7 @@
                 <li><a href="#roadmap">Roadmap</a></li>
                 <li><a href="#team-partners">Équipe</a></li>
                 <li><a href="#investors">Investir</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </div>
     </nav>
@@ -62,6 +63,12 @@
                 <a href="#investors" class="cta-button" aria-label="Investir maintenant">Investir Maintenant</a>
             </div>
         </section>
+
+        <div class="section future-section">
+            <h2>Accédez à l’immobilier de demain, sans les contraintes traditionnelles.</h2>
+            <p>Découvrez une nouvelle façon d’investir dans l’immobilier grâce à la technologie blockchain.</p>
+            <a href="#investors" class="cta-button" aria-label="Découvrir">Découvrir</a>
+        </div>
 
         <div class="section before-after">
             <h2>Avant et Après</h2>
@@ -233,7 +240,7 @@
                 <option value="usdt">USDT</option>
                 <option value="rwa">RWA Token</option>
             </select>
-            <button onclick="swapTokens()">Échanger</button>
+            <button onclick="swapTokens()" aria-label="Échanger">Échanger</button>
             <p>Résultat : <span id="swapResult">0</span></p>
         </div>
 
@@ -246,6 +253,56 @@
                 <a href="#" class="cta-button" id="open-demo-modal" aria-label="Demander une démo">Demander une Démo</a>
             </div>
             <a href="#start" class="cta-button cta-secondary" aria-label="Investir maintenant" style="margin-top: 20px; display: block;">Investir Maintenant</a>
+        </div>
+
+        <div class="section faq">
+            <h2>FAQ - Questions sur les RWA</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>Qu’est-ce qu’un RWA (Real World Asset) ?</summary>
+                    <p>Un RWA est un actif du monde réel (comme l’immobilier, les obligations ou les matières premières) tokenisé sur une blockchain, permettant une propriété fractionnée et une liquidité accrue.</p>
+                </details>
+                <details>
+                    <summary>Comment investir dans les RWA avec Legatio ?</summary>
+                    <p>Vous pouvez investir dès 100$ en achetant des tokens représentant des biens immobiliers via notre plateforme sécurisée sur Arbitrum.</p>
+                </details>
+                <details>
+                    <summary>Les RWA sont-ils risqués ?</summary>
+                    <p>Comme tout investissement, les RWA comportent des risques, mais Legatio minimise cela avec des audits (ex. CertiK) et une conformité KYC/AML.</p>
+                </details>
+                <details>
+                    <summary>Comment sont distribués les rendements ?</summary>
+                    <p>Les rendements passifs sont distribués mensuellement sous forme de dividendes aux détenteurs de tokens.</p>
+                </details>
+            </div>
+        </div>
+
+        <div class="section testimonials">
+            <h2>Ils parlent de nous</h2>
+            <div class="testimonial-list">
+                <p>"Legatio Finance redéfinit l’investissement immobilier avec la blockchain." - Marc T., Expert Crypto</p>
+                <p>"Une solution simple et sécurisée pour diversifier mon portefeuille crypto." - Sophie R., Investisseuse</p>
+            </div>
+            <div class="partner-logos">
+                <span>Nos partenaires</span>
+                <!-- Logo LBank -->
+                <a href="https://www.lbank.com/" target="_blank" aria-label="Logo LBank" alt="Logo LBank">
+                    <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" class="partner-logo">
+                        <text x="10" y="35" font-family="sans-serif" font-size="20" fill="#0A66C2">L</text>
+                        <text x="25" y="35" font-family="sans-serif" font-size="20" fill="#FFD700">B</text>
+                        <path d="M28 20 L33 20 L30.5 25 L33 30 L28 30 Z M28 30 L33 30 L30.5 25 L33 20 L28 20" fill="#000000"/>
+                        <text x="40" y="35" font-family="sans-serif" font-size="20" fill="#0A66C2">ank</text>
+                    </svg>
+                </a>
+                <!-- Logo Chainlink -->
+                <a href="https://chain.link/" target="_blank" aria-label="Logo Chainlink" alt="Logo Chainlink">
+                    <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" class="partner-logo">
+                        <polygon points="10,15 25,5 40,15 40,35 25,45 10,35" fill="none" stroke="#375BD2" stroke-width="4"/>
+                        <text x="50" y="35" font-family="sans-serif" font-size="20" fill="#375BD2">Chainlink</text>
+                    </svg>
+                </a>
+            </div>
+            <p class="certifications">Audité par CertiK | Conforme KYC/AML</p>
         </div>
 
         <div class="section stay-informed">
@@ -396,12 +453,22 @@
                 let value = parseFloat(document.getElementById("propertyValue").value);
                 let amount = parseFloat(document.getElementById("loanAmount").value);
                 let duration = parseFloat(document.getElementById("loanDuration").value);
-                let rate = 0.05;
+                let rate = 0.05; // Taux d'intérêt annuel de 5%
                 if (value >= amount && amount > 0 && duration > 0) {
                     let interest = amount * rate * (duration / 12);
                     document.getElementById("loanResult").innerText = (amount + interest).toFixed(2) + " USDT";
                 } else {
                     document.getElementById("loanResult").innerText = "Entrées invalides";
+                }
+            }
+
+            function swapTokens() {
+                let amount = parseFloat(document.getElementById("amount").value);
+                if (amount > 0) {
+                    // Simple conversion 1:1 pour l'exemple (ajustez selon vos besoins)
+                    document.getElementById("swapResult").innerText = amount + " " + document.getElementById("toToken").value.toUpperCase();
+                } else {
+                    document.getElementById("swapResult").innerText = "Montant invalide";
                 }
             }
 
@@ -413,15 +480,6 @@
                 document.getElementById('silverPrice').textContent = `$${data.ethereum.usd || 'N/A'}`;
             }
             fetchPrices(); setInterval(fetchPrices, 60000);
-
-            function swapTokens() {
-                let amount = parseFloat(document.getElementById("amount").value);
-                if (amount > 0) {
-                    document.getElementById("swapResult").textContent = amount;
-                } else {
-                    document.getElementById("swapResult").textContent = "Montant invalide";
-                }
-            }
         </script>
 </body>
 </html>
