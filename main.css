@@ -859,19 +859,15 @@ body {
     transform: scale(1.1);
 }
 
-.footer-links {
-    margin-bottom: 10px;
+/* Styles spécifiques pour les SVG */
+.footer-social-links svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor; /* Utilise la couleur de l'élément parent (a) */
 }
 
-.footer-links a {
-    color: #f1c40f;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #d4a017;
+.footer-social-links a:hover svg {
+    fill: #d4a017; /* Change la couleur au survol */
 }
 
 .footer-contact {
