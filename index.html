@@ -20,7 +20,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Google Analytics (remplacez 'UA-XXXXX-Y' par votre ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -154,18 +153,18 @@
                     <a href="#investors" class="cta-button cta-secondary" aria-label="Voir les opportunités">Voir les Opportunités</a>
                 </div>
             </div>
- <div class="tokenization-schema">
-    <h3>Comment un bien est tokenisé ?</h3>
-    <svg width="800" height="250" xmlns="http://www.w3.org/2000/svg" alt="Schéma de tokenisation immobilière" class="tokenization-diagram">
-        <rect x="150" y="50" width="150" height="70" fill="#3498db" rx="10" class="token-step" />
-        <text x="225" y="80" text-anchor="middle" fill="white" font-size="16">1. Acquisition</text>
-        <rect x="350" y="50" width="150" height="70" fill="#3498db" rx="10" class="token-step" />
-        <text x="425" y="80" text-anchor="middle" fill="white" font-size="16">2. Tokenisation</text>
-        <rect x="550" y="50" width="150" height="70" fill="#3498db" rx="10" class="token-step" />
-        <text x="625" y="80" text-anchor="middle" fill="white" font-size="16">3. Vente de Tokens</text>
-        <path d="M275 85 Q300 85 300 120 T350 155 T550 155 T600 120 T625 85" stroke="#f1c40f" stroke-width="3" fill="none" class="token-path" />
-    </svg>
-</div>
+            <div class="tokenization-schema">
+                <h3>Comment un bien est tokenisé ?</h3>
+                <svg width="800" height="250" xmlns="http://www.w3.org/2000/svg" alt="Schéma de tokenisation immobilière" class="tokenization-diagram">
+                    <rect x="150" y="50" width="150" height="70" fill="#3498db" rx="10" class="token-step" />
+                    <text x="225" y="80" text-anchor="middle" fill="white" font-size="16">1. Acquisition</text>
+                    <rect x="350" y="50" width="150" height="70" fill="#3498db" rx="10" class="token-step" />
+                    <text x="425" y="80" text-anchor="middle" fill="white" font-size="16">2. Tokenisation</text>
+                    <rect x="550" y="50" width="150" height="70" fill="#3498db" rx="10" class="token-step" />
+                    <text x="625" y="80" text-anchor="middle" fill="white" font-size="16">3. Vente de Tokens</text>
+                    <path d="M275 85 Q300 85 300 120 T350 155 T550 155 T600 120 T625 85" stroke="#f1c40f" stroke-width="3" fill="none" class="token-path" />
+                </svg>
+            </div>
         </div>
 
         <div id="token-nfts" class="section token-nfts">
@@ -339,7 +338,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <div class="social-links">
+            <div class="footer-social-links">
                 <a href="https://x.com/rdb_legend" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="https://discord.com/channels/1347668715357077577/1347668716120182888" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
             </div>
@@ -384,14 +383,12 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Menu hamburger
             const toggle = document.querySelector('.navbar-toggle');
             const nav = document.querySelector('.navbar ul');
             toggle.addEventListener('click', () => {
                 nav.classList.toggle('active');
             });
 
-            // Animations GSAP
             gsap.from(".section", { opacity: 0, y: 50, duration: 1, stagger: 0.3, scrollTrigger: { trigger: ".section", start: "top 90%" } });
             gsap.from(".use-case-item", { opacity: 0, y: 50, duration: 1, stagger: 0.3, scrollTrigger: { trigger: ".use-cases", start: "top 80%" } });
             gsap.from(".timeline-item", { opacity: 0, y: 50, duration: 1, stagger: 0.2, scrollTrigger: { trigger: ".roadmap", start: "top 80%" } });
@@ -409,7 +406,6 @@
                 });
             });
 
-            // Modal
             const modal = document.getElementById('demo-modal');
             const openModalBtn = document.getElementById('open-demo-modal');
             const closeModalBtn = document.getElementById('close-demo-modal');
@@ -466,7 +462,6 @@
                 }
             });
 
-            // Simulateur de prêt
             function calculateLoan() {
                 const propertyValue = parseFloat(document.getElementById("propertyValue").value) || 0;
                 const loanAmount = parseFloat(document.getElementById("loanAmount").value) || 0;
@@ -481,7 +476,6 @@
             }
             document.getElementById("calculateLoanBtn").addEventListener("click", calculateLoan);
 
-            // Échange RWA ↔ Stablecoins
             function swapTokens() {
                 const amount = parseFloat(document.getElementById("amount").value) || 0;
                 const toToken = document.getElementById("toToken").value;
@@ -493,14 +487,13 @@
             }
             document.getElementById("swapTokensBtn").addEventListener("click", swapTokens);
 
-            // Prix en direct
             async function fetchPrices() {
                 try {
                     const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gold,ethereum&vs_currencies=usd');
                     const data = await response.json();
                     document.getElementById('btcPrice').textContent = `BTC: $${data.bitcoin.usd}`;
                     document.getElementById('goldPrice').textContent = `Or: $${data.gold?.usd || 'N/A'}`;
-                    document.getElementById('silverPrice').textContent = `Argent: $${data.ethereum?.usd || 'N/A'}`; // Proxy
+                    document.getElementById('silverPrice').textContent = `Argent: $${data.ethereum?.usd || 'N/A'}`;
                 } catch (error) {
                     console.error("Erreur lors de la récupération des prix:", error);
                 }
@@ -508,7 +501,6 @@
             setInterval(fetchPrices, 60000);
             fetchPrices();
 
-            // Back to top
             document.querySelector('.back-to-top').addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
