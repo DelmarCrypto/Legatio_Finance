@@ -251,6 +251,10 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     max-width: 450px;
     transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 600px; /* Hauteur minimale pour uniformiser */
 }
 
 .use-case-item:hover {
@@ -266,33 +270,25 @@ body {
 .use-case-item p {
     color: #34495e;
     margin-bottom: 20px;
+    flex-grow: 1;
 }
 
-.use-case-item iframe {
+.use-case-item .graph-container {
+    flex-shrink: 0;
+}
+
+.use-case-item .graph-container iframe,
+.use-case-item .graph-container .collateral-graph {
     width: 100%;
     height: 400px;
     border: none;
     border-radius: 10px;
-    margin-top: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
-.use-case-item iframe:hover {
-    transform: scale(1.01);
-}
-
-/* Styles pour le SVG dans Collatéral pour Prêts */
-.use-case-item .collateral-graph {
-    width: 100%;
-    height: 400px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.use-case-item .collateral-graph:hover {
+.use-case-item .graph-container iframe:hover,
+.use-case-item .graph-container .collateral-graph:hover {
     transform: scale(1.01);
 }
 
@@ -331,8 +327,17 @@ body {
     }
 }
 
+.use-case-item .cta-button {
+    align-self: center;
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
-    .use-case-item iframe, .use-case-item .collateral-graph {
+    .use-case-item {
+        min-height: auto; /* Réinitialiser sur mobile */
+    }
+    .use-case-item .graph-container iframe,
+    .use-case-item .graph-container .collateral-graph {
         height: 300px; /* Ajustement pour mobile */
     }
 }
@@ -628,7 +633,6 @@ body {
 .cta-secondary {
     background-color: #3498db;
     border-color: #3498db;
-    margin-top: 15px;
 }
 
 .cta-secondary:hover {
@@ -861,7 +865,8 @@ body {
     .header {
         padding: 60px 20px;
     }
-    .use-case-item iframe, .use-case-item .collateral-graph {
+    .use-case-item .graph-container iframe,
+    .use-case-item .graph-container .collateral-graph {
         height: 250px; /* Ajustement spécifique pour mobile */
     }
 }
