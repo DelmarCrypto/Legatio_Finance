@@ -48,18 +48,28 @@ body {
     color: #f1c40f;
 }
 
+/* Menu Hamburger (mobile) */
 .navbar-toggle {
-    display: none;
+    display: none; /* Caché par défaut sur desktop */
     font-size: 1.5rem;
     color: #ecf0f1;
     background: none;
     border: none;
     cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 @media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* Affiché sur mobile */
+    }
+
     .navbar ul {
-        display: none;
+        display: none; /* Caché par défaut sur mobile */
         flex-direction: column;
         width: 100%;
         position: absolute;
@@ -67,16 +77,15 @@ body {
         left: 0;
         background: #1a252f;
         padding: 10px 0;
+        text-align: center;
     }
+
     .navbar ul.active {
-        display: flex;
+        display: flex; /* Affiché quand activé */
     }
-    .navbar-toggle {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+
+    .navbar ul li {
+        margin: 10px 0;
     }
 }
 
@@ -170,6 +179,13 @@ body {
     font-weight: 700;
     color: #2c3e50;
     margin-bottom: 15px;
+}
+
+/* Ajustement de la marge pour les écrans plus grands (commit bf1cc6) */
+@media (min-width: 768px) {
+    body {
+        margin-top: 20px;
+    }
 }
 
 /* Future Section */
