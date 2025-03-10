@@ -282,8 +282,57 @@ body {
     transform: scale(1.01);
 }
 
+/* Styles pour le SVG dans Collatéral pour Prêts */
+.use-case-item .collateral-graph {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.use-case-item .collateral-graph:hover {
+    transform: scale(1.01);
+}
+
+/* Animation de dessin progressif pour les courbes */
+.collateral-line, .yield-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 3s ease forwards;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Effet de survol sur les courbes */
+.collateral-line:hover, .yield-line:hover {
+    stroke-width: 4;
+    opacity: 0.9;
+}
+
+/* Animation de pulsation pour les cercles de la légende */
+.legend-circle {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
+
 @media (max-width: 768px) {
-    .use-case-item iframe {
+    .use-case-item iframe, .use-case-item .collateral-graph {
         height: 300px; /* Ajustement pour mobile */
     }
 }
@@ -812,7 +861,7 @@ body {
     .header {
         padding: 60px 20px;
     }
-    .use-case-item iframe {
+    .use-case-item iframe, .use-case-item .collateral-graph {
         height: 250px; /* Ajustement spécifique pour mobile */
     }
 }
