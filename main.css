@@ -840,33 +840,43 @@ body {
     margin: 0 auto;
 }
 
+/* Supprimez ou commentez les anciens styles de .footer-social-links si présents */
 .footer-social-links {
-    position: absolute;
+    /* position: absolute;
     bottom: 20px;
     left: 20px;
     display: flex;
-    gap: 15px;
+    gap: 15px; */
+    display: none; /* Désactive les icônes dans le footer */
 }
 
-.footer-social-links a {
+/* Nouveaux styles pour les icônes sociales en bas à droite */
+.social-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px; /* Réduit l'espacement entre les icônes */
+    z-index: 1000; /* Assure que les icônes restent au-dessus du contenu */
+}
+
+.social-icons a {
     color: #f1c40f;
-    font-size: 1.5rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.footer-social-links a:hover {
+.social-icons svg {
+    width: 16px; /* Réduit la taille des icônes à 16px (au lieu de 24px) */
+    height: 16px; /* Réduit la taille des icônes à 16px */
+    fill: currentColor; /* Utilise la couleur de l'élément parent */
+}
+
+.social-icons a:hover {
     color: #d4a017;
-    transform: scale(1.1);
+    transform: scale(1.1); /* Maintient l'effet de zoom au survol */
 }
 
-/* Styles spécifiques pour les SVG */
-.footer-social-links svg {
-    width: 24px;
-    height: 24px;
-    fill: currentColor; /* Utilise la couleur de l'élément parent (a) */
-}
-
-.footer-social-links a:hover svg {
+.social-icons a:hover svg {
     fill: #d4a017; /* Change la couleur au survol */
 }
 
