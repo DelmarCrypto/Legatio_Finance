@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    text-shadow: 0 0 5px rgba(241, 196, 15, 0.2), 0 0 10px rgba(241, 196, 15, 0.1); /* Réduction de la luminosité */
+    text-shadow: 0 0 5px rgba(241, 196, 15, 0.2), 0 0 10px rgba(241, 196, 15, 0.1);
     animation: subtleGlow 2s infinite alternate;
 }
 
@@ -290,7 +290,6 @@ a:hover {
 .section {
     padding: 80px 0;
     position: relative;
-    background: rgba(26, 42, 58, 0.3);
 }
 
 .section h2 {
@@ -327,6 +326,10 @@ a:hover {
 }
 
 /* Avant/Après */
+#before-after {
+    background: rgba(26, 42, 58, 0.2); /* Réduction de l'opacité pour moins sombre */
+}
+
 .before-after {
     display: flex;
     justify-content: space-around;
@@ -338,7 +341,7 @@ a:hover {
 .before, .after {
     flex: 1;
     padding: 25px;
-    background: rgba(15, 26, 36, 0.8);
+    background: rgba(15, 26, 36, 0.6); /* Légèrement plus clair */
     border-radius: 15px;
     transition: transform 0.3s ease;
 }
@@ -398,8 +401,11 @@ a:hover {
 }
 
 /* Pourquoi Investir */
+#why-invest {
+    background: rgba(15, 26, 36, 0.4); /* Réduction de l'opacité pour moins sombre */
+}
+
 .why-invest {
-    background: rgba(15, 26, 36, 0.9);
 }
 
 .invest-benefits {
@@ -414,7 +420,7 @@ a:hover {
 .benefit-item {
     text-align: center;
     padding: 25px;
-    background: rgba(26, 42, 58, 0.7);
+    background: rgba(26, 42, 58, 0.5); /* Légèrement plus clair */
     border-radius: 15px;
     flex: 1;
     min-width: 200px;
@@ -460,9 +466,12 @@ a:hover {
     }
 }
 
-/* Cas d'Usage */
+/* Cas d’Usage */
+#use-cases {
+    background: rgba(26, 42, 58, 0.3); /* Réduction de l'opacité pour moins sombre */
+}
+
 .use-cases {
-    background: rgba(15, 26, 36, 0.8);
 }
 
 .use-cases-content {
@@ -478,7 +487,7 @@ a:hover {
     flex: 1;
     min-width: 250px;
     padding: 25px;
-    background: rgba(26, 42, 58, 0.6);
+    background: rgba(15, 26, 36, 0.6); /* Légèrement plus clair */
     border-radius: 15px;
     text-align: center;
     transition: transform 0.3s ease;
@@ -576,9 +585,19 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.token-section .token-graph {
+    max-height: 200px; /* Réduction de la taille du camembert de moitié */
+    width: 50%; /* Réduction de la largeur de moitié */
+    margin: 15px auto; /* Centrage */
+}
+
 @media (max-width: 768px) {
     .token-section, .nfts-section {
         padding: 15px;
+    }
+
+    .token-section .token-graph {
+        width: 100%; /* Pleine largeur sur mobile */
     }
 }
 
