@@ -1,1325 +1,523 @@
-/* Reset de base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #0f1a24 0%, #1a2a3a 100%);
-    color: #e0e0e0;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Typographie */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lora', serif;
-    color: #f1c40f;
-}
-
-h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-shadow: 0 0 5px rgba(241, 196, 15, 0.2), 0 0 10px rgba(241, 196, 15, 0.1); /* Réduction de la luminosité */
-    animation: subtleGlow 2s infinite alternate;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-shadow: 0 0 5px rgba(241, 196, 15, 0.2);
-}
-
-h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    text-shadow: 0 0 3px rgba(241, 196, 15, 0.1);
-}
-
-p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    color: #d5d5d5;
-}
-
-a {
-    color: #f1c40f;
-    text-decoration: none;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-a:hover {
-    color: #ffd700;
-    text-shadow: 0 0 10px #ffd700;
-}
-
-/* Conteneur général */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Boutons CTA */
-.cta-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background: linear-gradient(45deg, #2ecc71, #27ae60);
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
-    box-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(46, 204, 113, 0.5);
-}
-
-.cta-secondary {
-    display: inline-block;
-    padding: 12px 25px;
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-left: 10px;
-    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cta-secondary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
-}
-
-/* Navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(15, 26, 36, 0.9);
-    padding: 10px 0;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar ul li a {
-    color: #f1c40f;
-    padding: 10px 15px;
-    font-size: 1.1rem;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-.navbar ul li a:hover {
-    color: #ffd700;
-    border-bottom: 2px solid #ffd700;
-}
-
-.navbar-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #f1c40f;
-    font-size: 24px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.navbar-toggle:hover {
-    color: #ffd700;
-}
-
-/* Dropdown pour sous-menus */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: rgba(26, 42, 58, 0.9);
-    min-width: 160px;
-    border-radius: 10px;
-    padding: 5px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
-    top: 100%;
-    left: 0;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: #f1c40f;
-    padding: 10px 20px;
-    display: block;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    color: #ffd700;
-    background: rgba(15, 26, 36, 0.5);
-}
-
-/* Menu mobile */
-@media (max-width: 768px) {
-    .navbar-toggle {
-        display: block;
-    }
-
-    .navbar ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgba(15, 26, 36, 0.9);
-        padding: 20px 0;
-        z-index: 999;
-    }
-
-    .navbar ul.active {
-        display: flex;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .navbar ul li a {
-        padding: 15px;
-        font-size: 1.2rem;
-    }
-
-    .dropdown-content {
-        position: static;
-        display: none;
-        width: 100%;
-        background: rgba(26, 42, 58, 0.9);
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-}
-
-/* Header */
-.header {
-    text-align: center;
-    padding: 120px 20px 80px;
-    background: linear-gradient(135deg, #0f1a24, #1a2a3a), url('assets/images/header-bg.jpg') no-repeat center center/cover;
-    position: relative;
-    overflow: hidden;
-}
-
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 26, 36, 0.6);
-    z-index: 1;
-}
-
-.header-content {
-    position: relative;
-    z-index: 2;
-    animation: fadeIn 1s ease-in;
-}
-
-.header-content h1 {
-    font-size: 4rem;
-    margin-bottom: 25px;
-}
-
-.header-content p {
-    font-size: 1.3rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
-}
-
-@media (max-width: 768px) {
-    .header {
-        padding: 80px 10px 50px;
-    }
-
-    .header-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .header-content p {
-        font-size: 1rem;
-    }
-}
-
-/* Sections générales */
-.section {
-    padding: 80px 0;
-    position: relative;
-    background: rgba(26, 42, 58, 0.3);
-}
-
-.section h2 {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
-
-.section p {
-    max-width: 800px;
-    margin: 0 auto 20px;
-}
-
-/* Section Future */
-.future-section {
-    background: linear-gradient(135deg, #1a2a3a, #0f1a24);
-    text-align: center;
-    padding: 60px 0;
-}
-
-.future-section p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 30px;
-}
-
-.future-section .future-image {
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Avant/Après */
-.before-after {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.before, .after {
-    flex: 1;
-    padding: 25px;
-    background: rgba(15, 26, 36, 0.8);
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-}
-
-.before:hover, .after:hover {
-    transform: scale(1.05);
-}
-
-.before h3 {
-    color: #e74c3c;
-    font-size: 1.6rem;
-}
-
-.after h3 {
-    color: #2ecc71;
-    font-size: 1.6rem;
-}
-
-.before ul, .after ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.before ul li, .after ul li {
-    margin: 12px 0;
-    font-size: 1.1rem;
-    position: relative;
-}
-
-.before ul li::before, .after ul li::before {
-    content: '✖';
-    color: #e74c3c;
-    margin-right: 10px;
-}
-
-.after ul li::before {
-    content: '✔';
-    color: #2ecc71;
-}
-
-.before-after .before-image, .before-after .after-image {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 768px) {
-    .before-after {
-        flex-direction: column;
-    }
-
-    .before, .after {
-        margin: 15px 0;
-    }
-}
-
-/* Pourquoi Investir */
-.why-invest {
-    background: rgba(15, 26, 36, 0.9);
-}
-
-.invest-benefits {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.benefit-item {
-    text-align: center;
-    padding: 25px;
-    background: rgba(26, 42, 58, 0.7);
-    border-radius: 15px;
-    flex: 1;
-    min-width: 200px;
-    transition: transform 0.3s ease;
-}
-
-.benefit-item:hover {
-    transform: scale(1.1);
-}
-
-.benefit-item i {
-    font-size: 2.5rem;
-    color: #f1c40f;
-    margin-bottom: 15px;
-    text-shadow: 0 0 5px #f1c40f;
-}
-
-.benefit-item h3 {
-    color: #e0e0e0;
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.benefit-item p {
-    font-size: 1rem;
-}
-
-.benefit-item .benefit-graph {
-    max-width: 100%;
-    height: 200px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 768px) {
-    .invest-benefits {
-        flex-direction: column;
-    }
-
-    .benefit-item {
-        min-width: 100%;
-    }
-}
-
-/* Cas d'Usage */
-.use-cases {
-    background: rgba(15, 26, 36, 0.8);
-}
-
-.use-cases-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: space-around;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.use-case-item {
-    flex: 1;
-    min-width: 250px;
-    padding: 25px;
-    background: rgba(26, 42, 58, 0.6);
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.use-case-item:hover {
-    transform: scale(1.05);
-}
-
-.use-case-item h3 {
-    color: #f1c40f;
-    font-size: 1.6rem;
-}
-
-.use-case-item p {
-    font-size: 1rem;
-}
-
-.use-case-item ol {
-    list-style: decimal inside;
-    text-align: left;
-    margin: 15px 0;
-    color: #d5d5d5;
-}
-
-.use-case-item ol li {
-    margin: 8px 0;
-}
-
-.use-case-image {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.graph-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 15px;
-    background: rgba(15, 26, 36, 0.9);
-    border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-    .use-cases-content {
-        flex-direction: column;
-    }
-
-    .use-case-item {
-        min-width: 100%;
-    }
-}
-
-/* Token & NFTs */
-.token-nfts {
-    background: rgba(26, 42, 58, 0.8);
-}
-
-.token-section, .nfts-section {
-    margin-bottom: 20px;
-    padding: 25px;
-    background: rgba(15, 26, 36, 0.7);
-    border-radius: 15px;
-}
-
-.token-section h3, .nfts-section h3 {
-    color: #f1c40f;
-    font-size: 1.8rem;
-}
-
-.token-section ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.token-section ul li {
-    margin: 12px 0;
-    font-size: 1.1rem;
-    position: relative;
-}
-
-.token-section ul li::before {
-    content: '🔹';
-    color: #2ecc71;
-    margin-right: 10px;
-}
-
-.token-section .token-graph, .nfts-section .nft-image {
-    max-width: 100%;
-    height: 200px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 768px) {
-    .token-section, .nfts-section {
-        padding: 15px;
-    }
-}
-
-/* Roadmap */
-.roadmap {
-    background: rgba(15, 26, 36, 0.9);
-}
-
-.timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.timeline-item {
-    padding: 20px;
-    background: rgba(26, 42, 58, 0.6);
-    border-left: 4px solid #f1c40f;
-    border-radius: 0 15px 15px 0;
-    transition: transform 0.3s ease;
-}
-
-.timeline-item:hover {
-    transform: translateX(10px);
-}
-
-.timeline-item h3 {
-    margin: 0 0 10px;
-    color: #f1c40f;
-    font-size: 1.6rem;
-}
-
-.timeline-item p {
-    font-size: 1.1rem;
-}
-
-.timeline-item .roadmap-image {
-    max-width: 100%;
-    height: 150px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 768px) {
-    .timeline-item {
-        padding: 15px;
-    }
-}
-
-/* Équipe */
-.team {
-    background: rgba(15, 26, 36, 0.8);
-}
-
-.team-section {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.team-member {
-    text-align: center;
-    padding: 25px;
-    background: rgba(26, 42, 58, 0.7);
-    border-radius: 15px;
-    flex: 1;
-    min-width: 200px;
-    transition: transform 0.3s ease;
-}
-
-.team-member:hover {
-    transform: scale(1.05);
-}
-
-.team-member h3 {
-    color: #f1c40f;
-    font-size: 1.5rem;
-}
-
-.team-member p {
-    font-size: 1rem;
-}
-
-.team-member .team-image {
-    max-width: 100px;
-    height: 100px;
-    margin: 0 auto 15px;
-    background: #2ecc71;
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-}
-
-@media (max-width: 768px) {
-    .team-section {
-        flex-direction: column;
-    }
-
-    .team-member {
-        min-width: 100%;
-    }
-}
-
-/* Simulateur */
-.simulator {
-    text-align: center;
-    padding: 25px;
-    background: rgba(26, 42, 58, 0.6);
-    border-radius: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.simulator-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.simulator-form label {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #e0e0e0;
-}
-
-.simulator-form input {
-    padding: 12px;
-    border: 1px solid #34495e;
-    border-radius: 10px;
-    background: rgba(15, 26, 36, 0.9);
-    color: #e0e0e0;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.simulator-form input:focus {
-    border-color: #f1c40f;
-    outline: none;
-}
-
-.simulator-form button {
-    padding: 12px;
-    background: linear-gradient(45deg, #2ecc71, #27ae60);
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: transform 0.3s ease;
-}
-
-.simulator-form button:hover {
-    transform: scale(1.05);
-}
-
-.simulator p {
-    font-size: 1.2rem;
-    margin-top: 15px;
-    color: #2ecc71;
-}
-
-/* Swap */
-.swap {
-    text-align: center;
-    padding: 25px;
-    background: rgba(26, 42, 58, 0.6);
-    border-radius: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.swap {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.swap select, .swap input {
-    padding: 12px;
-    border: 1px solid #34495e;
-    border-radius: 10px;
-    background: rgba(15, 26, 36, 0.9);
-    color: #e0e0e0;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.swap select:focus, .swap input:focus {
-    border-color: #f1c40f;
-    outline: none;
-}
-
-.swap button {
-    padding: 12px;
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: transform 0.3s ease;
-}
-
-.swap button:hover {
-    transform: scale(1.05);
-}
-
-.swap p {
-    font-size: 1.2rem;
-    margin-top: 15px;
-    color: #3498db;
-}
-
-/* Investisseurs */
-.investors {
-    background: rgba(15, 26, 36, 0.9);
-}
-
-.investor-buttons {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.investor-buttons .cta-button, .investor-buttons .cta-secondary {
-    margin: 10px;
-}
-
-.investor-buttons .investor-image {
-    max-width: 100%;
-    height: 200px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-/* FAQ */
-.faq {
-    background: rgba(26, 42, 58, 0.8);
-}
-
-.faq-list {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-details {
-    margin-bottom: 15px;
-}
-
-details summary {
-    cursor: pointer;
-    padding: 15px;
-    background: rgba(15, 26, 36, 0.7);
-    border-radius: 10px;
-    font-size: 1.1rem;
-    color: #f1c40f;
-    transition: background 0.3s ease;
-}
-
-details summary:hover {
-    background: rgba(26, 42, 58, 0.9);
-}
-
-details[open] summary {
-    background: rgba(26, 42, 58, 0.9);
-}
-
-details p {
-    padding: 15px;
-    background: rgba(15, 26, 36, 0.9);
-    border-radius: 0 0 10px 10px;
-    color: #d5d5d5;
-}
-
-/* Témoignages */
-.testimonials {
-    background: rgba(15, 26, 36, 0.8);
-}
-
-.testimonial-list {
-    text-align: center;
-    margin-bottom: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.testimonial-list p {
-    font-style: italic;
-    margin: 15px 0;
-    font-size: 1.1rem;
-    color: #e0e0e0;
-    position: relative;
-}
-
-.testimonial-list p::before {
-    content: '“';
-    color: #2ecc71;
-    font-size: 1.5rem;
-    position: absolute;
-    left: -20px;
-}
-
-.testimonial-list p::after {
-    content: '”';
-    color: #2ecc71;
-    font-size: 1.5rem;
-    position: absolute;
-    right: -20px;
-}
-
-.testimonial-list .testimonial-image {
-    max-width: 100%;
-    height: 150px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.partner-logos {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.partner-logos span {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #f1c40f;
-}
-
-.partner-logo {
-    width: 100px;
-    margin: 0 10px;
-    filter: drop-shadow(0 0 5px #f1c40f);
-    transition: transform 0.3s ease;
-}
-
-.partner-logo:hover {
-    transform: scale(1.1);
-}
-
-.certifications {
-    text-align: center;
-    color: #2ecc71;
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-shadow: 0 0 5px #2ecc71;
-}
-
-/* Restez Informé */
-.stay-informed {
-    background: rgba(26, 42, 58, 0.8);
-    text-align: center;
-}
-
-.stay-informed-actions {
-    margin-top: 20px;
-}
-
-#newsletter-form {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-#newsletter-form input {
-    padding: 12px;
-    border: 1px solid #34495e;
-    border-radius: 10px;
-    background: rgba(15, 26, 36, 0.9);
-    color: #e0e0e0;
-    font-size: 1rem;
-    width: 250px;
-    transition: border-color 0.3s ease;
-}
-
-#newsletter-form input:focus {
-    border-color: #f1c40f;
-    outline: none;
-}
-
-#newsletter-form button {
-    padding: 12px 20px;
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-#newsletter-form button:hover {
-    transform: scale(1.05);
-}
-
-/* Contact */
-#contact {
-    background: rgba(15, 26, 36, 0.9);
-    text-align: center;
-}
-
-/* Footer */
-.footer {
-    background: linear-gradient(135deg, #0d1720, #0f1a24);
-    padding: 40px 0;
-    text-align: center;
-    border-top: 1px solid rgba(241, 196, 15, 0.1);
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-links a, .footer-contact a {
-    display: block;
-    margin: 10px 0;
-    font-size: 1rem;
-    color: #d5d5d5;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover, .footer-contact a:hover {
-    color: #ffd700;
-}
-
-.footer-contact p {
-    margin-bottom: 15px;
-    color: #e0e0e0;
-}
-
-#quick-contact {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-#quick-contact input {
-    padding: 12px;
-    border: 1px solid #34495e;
-    border-radius: 10px;
-    background: rgba(15, 26, 36, 0.9);
-    color: #e0e0e0;
-    width: 200px;
-    transition: border-color 0.3s ease;
-}
-
-#quick-contact input:focus {
-    border-color: #f1c40f;
-    outline: none;
-}
-
-#quick-contact button {
-    padding: 12px 20px;
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-#quick-contact button:hover {
-    transform: scale(1.05);
-}
-
-.back-to-top {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 20px;
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    color: #fff;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.back-to-top:hover {
-    transform: scale(1.05);
-}
-
-/* Icônes sociales */
-.social-icons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    gap: 15px;
-    z-index: 1000;
-}
-
-.social-icons a {
-    color: #f1c40f;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons svg {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-    filter: drop-shadow(0 0 5px #f1c40f);
-    transition: transform 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #ffd700;
-}
-
-.social-icons a:hover svg {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 10px #ffd700);
-}
-
-/* Animations */
-@keyframes subtleGlow {
-    from {
-        text-shadow: 0 0 3px #f1c40f, 0 0 6px #f1c40f;
-    }
-    to {
-        text-shadow: 0 0 6px #ffd700, 0 0 12px #ffd700;
-    }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.section {
-    animation: fadeIn 1s ease-out;
-}
-
-/* Responsivité */
-@media (max-width: 1200px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (max-width: 992px) {
-    .container {
-        max-width: 720px;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2.2rem;
-    }
-
-    .header {
-        padding: 100px 15px 60px;
-    }
-}
-
-@media (max-width: 768px) {
-    .social-icons {
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .social-icons svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-
-    .header {
-        padding: 60px 10px 40px;
-    }
-
-    .header-content p {
-        font-size: 1rem;
-    }
-
-    .section {
-        padding: 50px 0;
-    }
-
-    .before-after {
-        flex-direction: column;
-    }
-
-    .invest-benefits, .use-cases-content, .team-section {
-        flex-direction: column;
-    }
-
-    .benefit-item, .use-case-item, .team-member {
-        min-width: 100%;
-    }
-
-    .simulator, .swap {
-        padding: 15px;
-    }
-
-    #newsletter-form {
-        flex-direction: column;
-    }
-
-    #newsletter-form input {
-        width: 100%;
-    }
-
-    #quick-contact {
-        flex-direction: column;
-    }
-
-    #quick-contact input {
-        width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-    .container {
-        padding: 5px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-    }
-
-    .header {
-        padding: 40px 5px;
-    }
-
-    .header-content p {
-        font-size: 0.9rem;
-    }
-
-    .cta-button, .cta-secondary {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .section {
-        padding: 30px 0;
-    }
-
-    .simulator-form input, .swap input, .swap select {
-        font-size: 0.9rem;
-    }
-
-    .simulator-form button, .swap button {
-        font-size: 1rem;
-    }
-}
-
-/* Accessibilité */
-@media (prefers-reduced-motion: reduce) {
-    .cta-button, .cta-secondary, .social-icons a, .social-icons svg, .navbar ul li a, .team-member, .use-case-item, .benefit-item, .timeline-item {
-        transition: none;
-    }
-
-    .section {
-        animation: none;
-    }
-}
-
-/* Styles visuels supplémentaires */
-.header-content h1::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #f1c40f, #ffd700);
-    margin: 15px auto;
-    border-radius: 2px;
-}
-
-.section h2::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 3px;
-    background: linear-gradient(90deg, #f1c40f, #ffd700);
-    margin: 15px auto;
-    border-radius: 2px;
-}
-
-.use-case-item h3::before {
-    content: '🔹';
-    color: #2ecc71;
-    margin-right: 5px;
-}
-
-.team-member h3::before {
-    content: '👤';
-    color: #3498db;
-    margin-right: 5px;
-}
-
-.timeline-item h3::before {
-    content: '⏳';
-    color: #e74c3c;
-    margin-right: 5px;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legatio Finance - Investissement Immobilier Tokenisé</title>
+    <meta name="description" content="Legatio Finance : Investissez dans l’immobilier tokenisé dès 100$ avec des rendements passifs en 2025 via Arbitrum. Prêts, staking, NFTs.">
+    <meta name="keywords" content="immobilier tokenisé, NFTs, staking, prêts crypto, blockchain Arbitrum, Legatio Finance, ROI, investissement">
+    <meta name="author" content="Legatio Finance Team">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Legatio Finance - L'Avenir de l'Investissement Immobilier">
+    <meta property="og:description" content="Découvrez l'investissement immobilier tokenisé avec Legatio Finance.">
+    <meta property="og:image" content="https://delmarcrypto.github.io/legatio.finance/assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2Lw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-Y');
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <button class="navbar-toggle" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#">Solutions</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#use-cases">Cas d'Usage</a></li>
+                        <li><a href="#token-nfts">Token & NFTs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#team">Équipe</a></li>
+                <li><a href="#investors">Investir</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Legatio Finance</h1>
+            <p style="margin-bottom: 25px;">L’avenir de l’investissement immobilier tokenisé. Investissez dans l’immobilier tokenisé dès 100$ avec des rendements passifs en 2025 via la blockchain Arbitrum.</p>
+            <a href="#investors" class="cta-button">Investir Maintenant</a>
+            <a href="#use-cases" class="cta-secondary">Voir les Opportunités</a>
+        </div>
+    </header>
+
+    <section id="start" class="section">
+        <div class="container">
+            <h2>Bienvenue chez Legatio Finance</h2>
+            <p style="margin-bottom: 25px;">Legatio Finance est une plateforme innovante de prêt et d’investissement sur la blockchain Arbitrum, adossée à des actifs immobiliers tokenisés.</p>
+            <ul style="margin-bottom: 25px;">
+                <li>✅ Investir dans des actifs réels sous forme de tokens.</li>
+                <li>✅ Utiliser vos biens tokenisés comme collatéral pour emprunter des stablecoins.</li>
+                <li>✅ Accéder à une finance plus transparente et décentralisée.</li>
+            </ul>
+            <a href="#investors" class="cta-button">Investir Maintenant</a>
+        </div>
+    </section>
+
+    <section id="future" class="future-section">
+        <div class="container">
+            <h2>Accédez à l’immobilier de demain</h2>
+            <p>Découvrez une nouvelle façon d’investir dans l’immobilier grâce à la technologie blockchain, sans les contraintes traditionnelles.</p>
+            <img src="assets/images/future-vision.jpg" alt="Vision futuriste de l'immobilier tokenisé" class="future-image">
+            <a href="#why-invest" class="cta-button">Découvrir</a>
+        </div>
+    </section>
+
+    <section id="before-after" class="section">
+        <div class="container">
+            <h2>Avant et Après</h2>
+            <div class="before-after">
+                <div class="before">
+                    <h3>Avant Legatio <span>❌</span></h3>
+                    <ul>
+                        <li>Accès limité par les banques.</li>
+                        <li>Capital élevé requis.</li>
+                        <li>Processus lent.</li>
+                    </ul>
+                    <img src="assets/images/before-investing.jpg" alt="Avant Legatio - Investissement traditionnel" class="before-image">
+                </div>
+                <div class="after">
+                    <h3>Avec Legatio <span>✅</span></h3>
+                    <ul>
+                        <li>Accès via blockchain.</li>
+                        <li>Investissement dès 100$.</li>
+                        <li>Processus rapide.</li>
+                    </ul>
+                    <img src="assets/images/after-investing.jpg" alt="Avec Legatio - Investissement tokenisé" class="after-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-invest" class="section why-invest">
+        <div class="container">
+            <h2>Pourquoi Investir avec Legatio ?</h2>
+            <div class="invest-benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>ROI Élevé</h3>
+                    <p>Jusqu’à 7% annuel avec staking.</p>
+                    <canvas class="benefit-graph" id="roi-graph"></canvas>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Sécurité</h3>
+                    <p>Audits CertiK et conformité KYC/AML.</p>
+                    <canvas class="benefit-graph" id="security-graph"></canvas>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-eye"></i>
+                    <h3>Transparence</h3>
+                    <p>Basé sur la blockchain Arbitrum.</p>
+                    <canvas class="benefit-graph" id="transparency-graph"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="use-cases" class="section use-cases">
+        <div class="container">
+            <h2>Cas d’Usage</h2>
+            <p>Découvrez comment les immeubles tokenisés transforment votre investissement.</p>
+            <div class="use-cases-content">
+                <div class="use-case-item">
+                    <h3>Rendements Passifs</h3>
+                    <p>Les revenus locatifs sont redistribués aux détenteurs de tokens sous forme de dividendes mensuels.</p>
+                    <img src="assets/images/passive-income.png" alt="Graphique des rendements passifs" class="use-case-image">
+                    <a href="#opportunities" class="cta-button">Voir les Opportunités</a>
+                </div>
+                <div class="use-case-item">
+                    <h3>Collatéral pour Prêts</h3>
+                    <p>Utilisez vos tokens comme garantie pour emprunter des stablecoins à des taux compétitifs.</p>
+                    <div class="graph-container">
+                        <canvas class="collateral-graph"></canvas>
+                    </div>
+                    <a href="#opportunities" class="cta-button">Voir les Opportunités</a>
+                </div>
+                <div class="use-case-item">
+                    <h3>Comment un bien est tokenisé ?</h3>
+                    <ol>
+                        <li>Acquisition</li>
+                        <li>Tokenisation</li>
+                        <li>Vente de Tokens</li>
+                    </ol>
+                    <img src="assets/images/tokenization-process.png" alt="Processus de tokenisation" class="use-case-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="token-nfts" class="section token-nfts">
+        <div class="container">
+            <h2>Token LEG & NFTs</h2>
+            <div class="token-section">
+                <h3>Token LEG</h3>
+                <p>$LEG est le cœur de l’écosystème Legatio. Utilisez-le pour :</p>
+                <ul>
+                    <li>Accéder aux prêts.</li>
+                    <li>Générer des rendements via staking (jusqu’à 5-7% annuel).</li>
+                    <li>Participer à la gouvernance.</li>
+                </ul>
+                <p><strong>Tokenomics :</strong> Total Supply : 100 000 000 LEG<br>
+                Distribution : 40% Staking, 25% Liquidité, 20% Développement, 10% Équipe, 5% Partenariats.</p>
+                <canvas class="token-graph" id="tokenomics-graph"></canvas>
+                <a href="#investors" class="cta-button">Investir Maintenant</a>
+            </div>
+            <div class="nfts-section">
+                <h3>NFTs Legatio</h3>
+                <p>Collection "Legatio Genesis" : 1 000 NFTs uniques sur Arbitrum.</p>
+                <p>Prix de Mint : 0.2 ETH | Lancement : Q3 2025.</p>
+                <p>Avantages : Frais réduits, accès anticipé, gouvernance.</p>
+                <img src="assets/images/nft-collection.jpg" alt="Collection NFT Legatio Genesis" class="nft-image">
+                <a href="#opportunities" class="cta-button">Voir les Opportunités</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="section roadmap">
+        <div class="container">
+            <h2>Roadmap</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Phase 1</h3>
+                    <p>Développement du protocole Legatio - Q2 2024</p>
+                    <img src="assets/images/roadmap-phase1.jpg" alt="Développement du protocole" class="roadmap-image">
+                </div>
+                <div class="timeline-item">
+                    <h3>Phase 2</h3>
+                    <p>Tokenisation des premiers immeubles - Q3 2024</p>
+                    <img src="assets/images/roadmap-phase2.jpg" alt="Tokenisation des immeubles" class="roadmap-image">
+                </div>
+                <div class="timeline-item">
+                    <h3>Phase 3</h3>
+                    <p>Lancement du Token LEG & Staking - Q4 2024</p>
+                    <img src="assets/images/roadmap-phase3.jpg" alt="Lancement du Token LEG" class="roadmap-image">
+                </div>
+                <div class="timeline-item">
+                    <h3>Phase 4</h3>
+                    <p>Déploiement des prêts adossés à RWA - Q1 2025</p>
+                    <img src="assets/images/roadmap-phase4.jpg" alt="Prêts adossés à RWA" class="roadmap-image">
+                </div>
+                <div class="timeline-item">
+                    <h3>Phase 5</h3>
+                    <p>Expansion internationale & adoption - 2025-2026</p>
+                    <img src="assets/images/roadmap-phase5.jpg" alt="Expansion internationale" class="roadmap-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section team">
+        <div class="container">
+            <h2>Notre Équipe</h2>
+            <div class="team-section">
+                <div class="team-member">
+                    <div class="team-image"></div>
+                    <h3>Rodrigues Delmar</h3>
+                    <p>Co-fondateur & CEO - Expert en trading crypto & blockchain.</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-image"></div>
+                    <h3>Alexandre Perez</h3>
+                    <p>CTO - Ingénieur blockchain spécialisé en smart contracts.</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-image"></div>
+                    <h3>Marie Balsan</h3>
+                    <p>COO - Experte en régulation et conformité crypto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="simulator" class="section">
+        <div class="container">
+            <h2>Simulateur de Prêt</h2>
+            <div class="simulator">
+                <form class="simulator-form">
+                    <label for="loan-amount">Montant du prêt ($):</label>
+                    <input type="number" id="loan-amount" placeholder="1000" min="100" required>
+                    <label for="loan-duration">Durée (mois):</label>
+                    <input type="number" id="loan-duration" placeholder="12" min="1" max="24" required>
+                    <button type="submit">Calculer</button>
+                </form>
+                <p>Rendement estimé : <span id="loan-result">0 USDT</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="swap" class="section">
+        <div class="container">
+            <h2>Échange RWA ↔ Stablecoins</h2>
+            <div class="swap">
+                <select id="swap-from">
+                    <option value="rwa">RWA</option>
+                    <option value="usdt">USDT</option>
+                </select>
+                <input type="number" id="swap-amount" placeholder="100" min="0" required>
+                <select id="swap-to">
+                    <option value="usdt">USDT</option>
+                    <option value="rwa">RWA</option>
+                </select>
+                <button type="button" id="swap-button">Échanger</button>
+                <p>Résultat : <span id="swap-result">0</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="investors" class="section investors">
+        <div class="container">
+            <h2>Pour les Investisseurs</h2>
+            <p>Explorez notre vision innovante pour transformer l’immobilier avec la blockchain.</p>
+            <div class="investor-buttons">
+                <img src="assets/images/investor-vision.jpg" alt="Vision pour les investisseurs" class="investor-image">
+                <a href="#contact" class="cta-button">Investir Maintenant</a>
+                <a href="#why-invest" class="cta-secondary">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section faq">
+        <div class="container">
+            <h2>FAQ - Questions sur les RWA</h2>
+            <div class="faq-list">
+                <details>
+                    <summary>Qu’est-ce qu’un RWA (Real World Asset) ?</summary>
+                    <p>Un RWA est un actif du monde réel (comme l’immobilier, les obligations ou les matières premières) tokenisé sur une blockchain, permettant une propriété fractionnée et une liquidité accrue.</p>
+                </details>
+                <details>
+                    <summary>Comment investir dans les RWA avec Legatio ?</summary>
+                    <p>Vous pouvez investir dès 100$ en achetant des tokens représentant des biens immobiliers via notre plateforme sécurisée sur Arbitrum.</p>
+                </details>
+                <details>
+                    <summary>Les RWA sont-ils risqués ?</summary>
+                    <p>Comme tout investissement, les RWA comportent des risques, mais Legatio minimise cela avec des audits (ex. CertiK) et une conformité KYC/AML.</p>
+                </details>
+                <details>
+                    <summary>Comment sont distribués les rendements ?</summary>
+                    <p>Les rendements passifs sont distribués mensuellement sous forme de dividendes aux détenteurs de tokens.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2>Ils parlent de nous</h2>
+            <div class="testimonial-list">
+                <p>"Legatio Finance redéfinit l’investissement immobilier avec la blockchain." - Marc T., Expert Crypto</p>
+                <p>"Une solution simple et sécurisée pour diversifier mon portefeuille crypto." - Sophie R., Investisseuse</p>
+                <img src="assets/images/testimonial-bg.jpg" alt="Image de fond des témoignages" class="testimonial-image">
+            </div>
+            <div class="partner-logos">
+                <span>Nos partenaires :</span>
+                <img src="assets/images/partner1.png" alt="Partenaire 1" class="partner-logo">
+                <img src="assets/images/partner2.png" alt="Partenaire 2" class="partner-logo">
+            </div>
+            <div class="certifications">Audité par CertiK | Conforme KYC/AML</div>
+        </div>
+    </section>
+
+    <section id="stay-informed" class="section stay-informed">
+        <div class="container">
+            <h2>Rejoignez la Révolution</h2>
+            <p>Inscrivez-vous pour nos mises à jour.</p>
+            <div class="stay-informed-actions">
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit" class="cta-button">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contactez-Nous</h2>
+            <p>Contactez-nous : <a href="mailto:contact@legatio.finance">contact@legatio.finance</a></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Accueil</a>
+                <a href="#future">Futur</a>
+                <a href="#before-after">Avant/Après</a>
+                <a href="#why-invest">Pourquoi Investir</a>
+                <a href="#use-cases">Cas d'Usage</a>
+                <a href="#token-nfts">Token & NFTs</a>
+                <a href="#roadmap">Roadmap</a>
+                <a href="#team">Équipe</a>
+                <a href="#simulator">Simulateur</a>
+                <a href="#swap">Swap</a>
+                <a href="#investors">Investisseurs</a>
+                <a href="#faq">FAQ</a>
+                <a href="#testimonials">Témoignages</a>
+                <a href="#stay-informed">Restez Informé</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <p>Contactez-nous : <a href="mailto:contact@legatio.finance">contact@legatio.finance</a></p>
+                <div id="quick-contact">
+                    <input type="email" placeholder="Votre email">
+                    <button>Envoyer</button>
+                </div>
+                <a href="#" class="back-to-top">Retour en haut</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="social-icons">
+        <a href="https://x.com/rdb_legend" target="_blank" aria-label="Suivez-nous sur X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <path fill="#f1c40f" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+        </a>
+        <a href="https://discord.com/channels/1347668715357077577/1347668716120182888" target="_blank" aria-label="Rejoignez notre serveur Discord">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <path fill="#f1c40f" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.433-.426.83-.6358 1.2429a18.2507 18.2507 0 00-5.4877 0c-.2098-.4129-.4248-.8099-.6358-1.2429a.075.075 0 00-.0785-.037 19.736 19.736 0 00-4.8852 1.515.0699.0699 0 00-.032.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561 19.92 19.92 0 005.9933 3.03.078.078 0 00.0845-.0285c.4626-.6304.8747-1.2952 1.2268-1.9922a.076.076 0 00-.0419-.1057 13.069 13.069 0 01-1.872-.8925.077.077 0 01-.0087-.1272c.1258-.0944.2517-.1923.3718-.2914a.0743.0743 0 01.0772-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0775.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1272 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.771.9628 1.2314 1.9912a.076.076 0 00.084-.0285 19.8316 19.8316 0 005.993-3.0299.0779.0779 0 00.0319-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1469-1.0857-2.1469-2.4241s.964-2.4241 2.1469-2.4241 2.145 1.0857 2.145 2.4241c.0001 1.3384-.9629 2.4241-2.145 2.4241zm7.958 0c-1.1825 0-2.1469-1.0857-2.1469-2.4241s.964-2.4241 2.1469-2.4241 2.145 1.0857 2.145 2.4241c.0001 1.3384-.9628 2.4241-2.145 2.4241z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // Menu mobile
+        document.querySelector('.navbar-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar ul').classList.toggle('active');
+        });
+
+        // Simulateur de prêt
+        document.querySelector('.simulator-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const amount = document.getElementById('loan-amount').value || 1000;
+            const duration = document.getElementById('loan-duration').value || 12;
+            const interest = (amount * 0.05 * duration / 12).toFixed(2); // 5% annuel
+            document.getElementById('loan-result').textContent = `${interest} USDT`;
+        });
+
+        // Échange RWA ↔ Stablecoins
+        document.getElementById('swap-button').addEventListener('click', function() {
+            const amount = document.getElementById('swap-amount').value || 0;
+            const rate = 0.95; // Taux fictif
+            const result = (amount * rate).toFixed(2);
+            document.getElementById('swap-result').textContent = `${result} ${document.getElementById('swap-to').value.toUpperCase()}`;
+        });
+
+        // Graphiques Chart.js
+        const ctxCollateral = document.querySelector('.collateral-graph').getContext('2d');
+        new Chart(ctxCollateral, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+                datasets: [{
+                    label: 'Rendement (%)',
+                    data: [2, 3, 5, 4],
+                    borderColor: '#f1c40f',
+                    tension: 0.1,
+                    fill: true,
+                    backgroundColor: 'rgba(241, 196, 15, 0.2)'
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        const ctxRoi = document.getElementById('roi-graph').getContext('2d');
+        new Chart(ctxRoi, {
+            type: 'bar',
+            data: {
+                labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                datasets: [{
+                    label: 'ROI (%)',
+                    data: [5, 6, 7, 6.5],
+                    backgroundColor: '#2ecc71',
+                    borderColor: '#27ae60',
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        const ctxSecurity = document.getElementById('security-graph').getContext('2d');
+        new Chart(ctxSecurity, {
+            type: 'doughnut',
+            data: {
+                labels: ['Audits', 'KYC/AML', 'Smart Contracts'],
+                datasets: [{
+                    data: [40, 30, 30],
+                    backgroundColor: ['#3498db', '#e74c3c', '#9b59b6'],
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        const ctxTransparency = document.getElementById('transparency-graph').getContext('2d');
+        new Chart(ctxTransparency, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar'],
+                datasets: [{
+                    label: 'Transactions',
+                    data: [100, 150, 200],
+                    borderColor: '#f1c40f',
+                    tension: 0.1,
+                    fill: true,
+                    backgroundColor: 'rgba(241, 196, 15, 0.2)'
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        const ctxTokenomics = document.getElementById('tokenomics-graph').getContext('2d');
+        new Chart(ctxTokenomics, {
+            type: 'pie',
+            data: {
+                labels: ['Staking', 'Liquidité', 'Développement', 'Équipe', 'Partenariats'],
+                datasets: [{
+                    data: [40, 25, 20, 10, 5],
+                    backgroundColor: ['#2ecc71', '#3498db', '#e74c3c', '#9b59b6', '#f1c40f'],
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        // Newsletter
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci de vous être inscrit ! Vous recevrez bientôt nos nouvelles.');
+            this.reset();
+        });
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".section", {
+            scrollTrigger: ".section",
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.2
+        });
+    </script>
+</body>
+</html>
