@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Section Bienvenue -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#start</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Section Futur -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#future</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Section Avant/Après -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#before-after</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Section Pourquoi Investir -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#why-invest</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Section Cas d'Usage -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#use-cases</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Section Token & NFTs -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#token-nfts</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Section Roadmap -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#roadmap</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Section Équipe -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#team</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Section Simulateur -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#simulator</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Section Échange -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#swap</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Section Pour les Investisseurs -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#investors</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Section FAQ -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#faq</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Section Témoignages -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#testimonials</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Section Restez Informé -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#stay-informed</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Section Contact -->
+    <url>
+        <loc>https://delmarcrypto.github.io/legatio_finance/#contact</loc>
+        <lastmod>2025-03-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>
