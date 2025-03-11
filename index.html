@@ -52,13 +52,13 @@
     </nav>
 
     <header class="header">
-    <div class="header-content">
-        <h1>Legatio Finance</h1>
-        <p style="margin-bottom: 25px;">L’avenir de l’investissement immobilier tokenisé. Investissez dans l’immobilier tokenisé dès 100$ avec des rendements passifs en 2025 via la blockchain Arbitrum.</p>
-        <a href="#investors" class="cta-button">Investir Maintenant</a>
-        <a href="#use-cases" class="cta-secondary">Voir les Opportunités</a>
-    </div>
-</header>
+        <div class="header-content">
+            <h1>Legatio Finance</h1>
+            <p style="margin-bottom: 25px;">L’avenir de l’investissement immobilier tokenisé. Investissez dans l’immobilier tokenisé dès 100$ avec des rendements passifs en 2025 via la blockchain Arbitrum.</p>
+            <a href="#investors" class="cta-button">Investir Maintenant</a>
+            <a href="#use-cases" class="cta-secondary">Voir les Opportunités</a>
+        </div>
+    </header>
 
     <section id="start" class="section">
         <div class="container">
@@ -77,6 +77,7 @@
         <div class="container">
             <h2>Accédez à l’immobilier de demain</h2>
             <p>Découvrez une nouvelle façon d’investir dans l’immobilier grâce à la technologie blockchain, sans les contraintes traditionnelles.</p>
+            <img src="assets/images/future-vision.jpg" alt="Vision futuriste de l'immobilier tokenisé" class="future-image">
             <a href="#why-invest" class="cta-button">Découvrir</a>
         </div>
     </section>
@@ -92,6 +93,7 @@
                         <li>Capital élevé requis.</li>
                         <li>Processus lent.</li>
                     </ul>
+                    <img src="assets/images/before-investing.jpg" alt="Avant Legatio - Investissement traditionnel" class="before-image">
                 </div>
                 <div class="after">
                     <h3>Avec Legatio <span>✅</span></h3>
@@ -100,6 +102,7 @@
                         <li>Investissement dès 100$.</li>
                         <li>Processus rapide.</li>
                     </ul>
+                    <img src="assets/images/after-investing.jpg" alt="Avec Legatio - Investissement tokenisé" class="after-image">
                 </div>
             </div>
         </div>
@@ -113,16 +116,19 @@
                     <i class="fas fa-chart-line"></i>
                     <h3>ROI Élevé</h3>
                     <p>Jusqu’à 7% annuel avec staking.</p>
+                    <canvas class="benefit-graph" id="roi-graph"></canvas>
                 </div>
                 <div class="benefit-item">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Sécurité</h3>
                     <p>Audits CertiK et conformité KYC/AML.</p>
+                    <canvas class="benefit-graph" id="security-graph"></canvas>
                 </div>
                 <div class="benefit-item">
                     <i class="fas fa-eye"></i>
                     <h3>Transparence</h3>
                     <p>Basé sur la blockchain Arbitrum.</p>
+                    <canvas class="benefit-graph" id="transparency-graph"></canvas>
                 </div>
             </div>
         </div>
@@ -173,6 +179,7 @@
                 </ul>
                 <p><strong>Tokenomics :</strong> Total Supply : 100 000 000 LEG<br>
                 Distribution : 40% Staking, 25% Liquidité, 20% Développement, 10% Équipe, 5% Partenariats.</p>
+                <canvas class="token-graph" id="tokenomics-graph"></canvas>
                 <a href="#investors" class="cta-button">Investir Maintenant</a>
             </div>
             <div class="nfts-section">
@@ -180,6 +187,7 @@
                 <p>Collection "Legatio Genesis" : 1 000 NFTs uniques sur Arbitrum.</p>
                 <p>Prix de Mint : 0.2 ETH | Lancement : Q3 2025.</p>
                 <p>Avantages : Frais réduits, accès anticipé, gouvernance.</p>
+                <img src="assets/images/nft-collection.jpg" alt="Collection NFT Legatio Genesis" class="nft-image">
                 <a href="#opportunities" class="cta-button">Voir les Opportunités</a>
             </div>
         </div>
@@ -192,22 +200,27 @@
                 <div class="timeline-item">
                     <h3>Phase 1</h3>
                     <p>Développement du protocole Legatio - Q2 2024</p>
+                    <img src="assets/images/roadmap-phase1.jpg" alt="Développement du protocole" class="roadmap-image">
                 </div>
                 <div class="timeline-item">
                     <h3>Phase 2</h3>
                     <p>Tokenisation des premiers immeubles - Q3 2024</p>
+                    <img src="assets/images/roadmap-phase2.jpg" alt="Tokenisation des immeubles" class="roadmap-image">
                 </div>
                 <div class="timeline-item">
                     <h3>Phase 3</h3>
                     <p>Lancement du Token LEG & Staking - Q4 2024</p>
+                    <img src="assets/images/roadmap-phase3.jpg" alt="Lancement du Token LEG" class="roadmap-image">
                 </div>
                 <div class="timeline-item">
                     <h3>Phase 4</h3>
                     <p>Déploiement des prêts adossés à RWA - Q1 2025</p>
+                    <img src="assets/images/roadmap-phase4.jpg" alt="Prêts adossés à RWA" class="roadmap-image">
                 </div>
                 <div class="timeline-item">
                     <h3>Phase 5</h3>
                     <p>Expansion internationale & adoption - 2025-2026</p>
+                    <img src="assets/images/roadmap-phase5.jpg" alt="Expansion internationale" class="roadmap-image">
                 </div>
             </div>
         </div>
@@ -218,14 +231,17 @@
             <h2>Notre Équipe</h2>
             <div class="team-section">
                 <div class="team-member">
+                    <div class="team-image"></div>
                     <h3>Rodrigues Delmar</h3>
                     <p>Co-fondateur & CEO - Expert en trading crypto & blockchain.</p>
                 </div>
                 <div class="team-member">
+                    <div class="team-image"></div>
                     <h3>Alexandre Perez</h3>
                     <p>CTO - Ingénieur blockchain spécialisé en smart contracts.</p>
                 </div>
                 <div class="team-member">
+                    <div class="team-image"></div>
                     <h3>Marie Balsan</h3>
                     <p>COO - Experte en régulation et conformité crypto.</p>
                 </div>
@@ -273,6 +289,7 @@
             <h2>Pour les Investisseurs</h2>
             <p>Explorez notre vision innovante pour transformer l’immobilier avec la blockchain.</p>
             <div class="investor-buttons">
+                <img src="assets/images/investor-vision.jpg" alt="Vision pour les investisseurs" class="investor-image">
                 <a href="#contact" class="cta-button">Investir Maintenant</a>
                 <a href="#why-invest" class="cta-secondary">En savoir plus</a>
             </div>
@@ -309,6 +326,7 @@
             <div class="testimonial-list">
                 <p>"Legatio Finance redéfinit l’investissement immobilier avec la blockchain." - Marc T., Expert Crypto</p>
                 <p>"Une solution simple et sécurisée pour diversifier mon portefeuille crypto." - Sophie R., Investisseuse</p>
+                <img src="assets/images/testimonial-bg.jpg" alt="Image de fond des témoignages" class="testimonial-image">
             </div>
             <div class="partner-logos">
                 <span>Nos partenaires :</span>
@@ -405,9 +423,9 @@
             document.getElementById('swap-result').textContent = `${result} ${document.getElementById('swap-to').value.toUpperCase()}`;
         });
 
-        // Graphique Chart.js pour Collatéral
-        const ctx = document.querySelector('.collateral-graph').getContext('2d');
-        new Chart(ctx, {
+        // Graphiques Chart.js
+        const ctxCollateral = document.querySelector('.collateral-graph').getContext('2d');
+        new Chart(ctxCollateral, {
             type: 'line',
             data: {
                 labels: ['Jan', 'Feb', 'Mar', 'Apr'],
@@ -415,9 +433,73 @@
                     label: 'Rendement (%)',
                     data: [2, 3, 5, 4],
                     borderColor: '#f1c40f',
-                    tension: 0.1
+                    tension: 0.1,
+                    fill: true,
+                    backgroundColor: 'rgba(241, 196, 15, 0.2)'
                 }]
-            }
+            },
+            options: { responsive: true }
+        });
+
+        const ctxRoi = document.getElementById('roi-graph').getContext('2d');
+        new Chart(ctxRoi, {
+            type: 'bar',
+            data: {
+                labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                datasets: [{
+                    label: 'ROI (%)',
+                    data: [5, 6, 7, 6.5],
+                    backgroundColor: '#2ecc71',
+                    borderColor: '#27ae60',
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        const ctxSecurity = document.getElementById('security-graph').getContext('2d');
+        new Chart(ctxSecurity, {
+            type: 'doughnut',
+            data: {
+                labels: ['Audits', 'KYC/AML', 'Smart Contracts'],
+                datasets: [{
+                    data: [40, 30, 30],
+                    backgroundColor: ['#3498db', '#e74c3c', '#9b59b6'],
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        const ctxTransparency = document.getElementById('transparency-graph').getContext('2d');
+        new Chart(ctxTransparency, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar'],
+                datasets: [{
+                    label: 'Transactions',
+                    data: [100, 150, 200],
+                    borderColor: '#f1c40f',
+                    tension: 0.1,
+                    fill: true,
+                    backgroundColor: 'rgba(241, 196, 15, 0.2)'
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        const ctxTokenomics = document.getElementById('tokenomics-graph').getContext('2d');
+        new Chart(ctxTokenomics, {
+            type: 'pie',
+            data: {
+                labels: ['Staking', 'Liquidité', 'Développement', 'Équipe', 'Partenariats'],
+                datasets: [{
+                    data: [40, 25, 20, 10, 5],
+                    backgroundColor: ['#2ecc71', '#3498db', '#e74c3c', '#9b59b6', '#f1c40f'],
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true }
         });
 
         // Newsletter
@@ -425,6 +507,16 @@
             e.preventDefault();
             alert('Merci de vous être inscrit ! Vous recevrez bientôt nos nouvelles.');
             this.reset();
+        });
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".section", {
+            scrollTrigger: ".section",
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.2
         });
     </script>
 </body>
