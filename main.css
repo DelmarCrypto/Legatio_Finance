@@ -21,23 +21,25 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lora', serif;
     color: #f1c40f;
-    text-shadow: 0 0 10px rgba(241, 196, 15, 0.3);
 }
 
 h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    animation: neonGlow 2s infinite alternate;
+    text-shadow: 0 0 5px rgba(241, 196, 15, 0.2), 0 0 10px rgba(241, 196, 15, 0.1); /* Réduction de la luminosité */
+    animation: subtleGlow 2s infinite alternate;
 }
 
 h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
+    text-shadow: 0 0 5px rgba(241, 196, 15, 0.2);
 }
 
 h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
+    text-shadow: 0 0 3px rgba(241, 196, 15, 0.1);
 }
 
 p {
@@ -54,7 +56,7 @@ a {
 
 a:hover {
     color: #ffd700;
-    text-shadow: 0 0 15px #ffd700;
+    text-shadow: 0 0 10px #ffd700;
 }
 
 /* Conteneur général */
@@ -74,13 +76,13 @@ a:hover {
     border-radius: 25px;
     font-weight: bold;
     text-transform: uppercase;
-    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8);
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.5);
 }
 
 .cta-secondary {
@@ -93,13 +95,13 @@ a:hover {
     font-weight: bold;
     text-transform: uppercase;
     margin-left: 10px;
-    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cta-secondary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
 }
 
 /* Navbar */
@@ -166,7 +168,7 @@ a:hover {
     min-width: 160px;
     border-radius: 10px;
     padding: 5px 0;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
     top: 100%;
     left: 0;
@@ -289,7 +291,6 @@ a:hover {
     padding: 80px 0;
     position: relative;
     background: rgba(26, 42, 58, 0.3);
-    border-bottom: 1px solid rgba(241, 196, 15, 0.1);
 }
 
 .section h2 {
@@ -315,6 +316,14 @@ a:hover {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto 30px;
+}
+
+.future-section .future-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Avant/Après */
@@ -370,6 +379,14 @@ a:hover {
     color: #2ecc71;
 }
 
+.before-after .before-image, .before-after .after-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 768px) {
     .before-after {
         flex-direction: column;
@@ -412,7 +429,7 @@ a:hover {
     font-size: 2.5rem;
     color: #f1c40f;
     margin-bottom: 15px;
-    text-shadow: 0 0 10px #f1c40f;
+    text-shadow: 0 0 5px #f1c40f;
 }
 
 .benefit-item h3 {
@@ -423,6 +440,14 @@ a:hover {
 
 .benefit-item p {
     font-size: 1rem;
+}
+
+.benefit-item .benefit-graph {
+    max-width: 100%;
+    height: 200px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -488,7 +513,7 @@ a:hover {
     height: auto;
     margin: 20px 0;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .graph-container {
@@ -543,6 +568,14 @@ a:hover {
     margin-right: 10px;
 }
 
+.token-section .token-graph, .nfts-section .nft-image {
+    max-width: 100%;
+    height: 200px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 768px) {
     .token-section, .nfts-section {
         padding: 15px;
@@ -582,6 +615,14 @@ a:hover {
 
 .timeline-item p {
     font-size: 1.1rem;
+}
+
+.timeline-item .roadmap-image {
+    max-width: 100%;
+    height: 150px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -627,13 +668,11 @@ a:hover {
     font-size: 1rem;
 }
 
-.team-member::before {
-    content: '';
-    display: block;
-    width: 100px;
+.team-member .team-image {
+    max-width: 100px;
     height: 100px;
-    background: #2ecc71;
     margin: 0 auto 15px;
+    background: #2ecc71;
     border-radius: 50%;
     animation: pulse 2s infinite;
 }
@@ -656,7 +695,7 @@ a:hover {
     border-radius: 15px;
     max-width: 500px;
     margin: 0 auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .simulator-form {
@@ -715,7 +754,7 @@ a:hover {
     border-radius: 15px;
     max-width: 500px;
     margin: 0 auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .swap {
@@ -772,6 +811,14 @@ a:hover {
 
 .investor-buttons .cta-button, .investor-buttons .cta-secondary {
     margin: 10px;
+}
+
+.investor-buttons .investor-image {
+    max-width: 100%;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* FAQ */
@@ -847,6 +894,14 @@ details p {
     font-size: 1.5rem;
     position: absolute;
     right: -20px;
+}
+
+.testimonial-list .testimonial-image {
+    max-width: 100%;
+    height: 150px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .partner-logos {
@@ -1049,18 +1104,18 @@ details p {
 }
 
 /* Animations */
-@keyframes neonGlow {
+@keyframes subtleGlow {
     from {
-        text-shadow: 0 0 5px #f1c40f, 0 0 10px #f1c40f, 0 0 15px #f1c40f;
+        text-shadow: 0 0 3px #f1c40f, 0 0 6px #f1c40f;
     }
     to {
-        text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+        text-shadow: 0 0 6px #ffd700, 0 0 12px #ffd700;
     }
 }
 
 @keyframes pulse {
     0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
 
@@ -1230,7 +1285,7 @@ details p {
     }
 }
 
-/* Styles supplémentaires pour l'esthétique crypto */
+/* Styles visuels supplémentaires */
 .header-content h1::after {
     content: '';
     display: block;
