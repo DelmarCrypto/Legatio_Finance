@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legatio Finance - Investissement Immobilier Tokenisé</title>
-    <meta name="description" content="Legatio Finance : Investissez dans l’immobilier tokenisé dès 100$ avec des rendements passifs en 2025 via Arbitrum. Prêts, staking, NFTs.">
-    <meta name="keywords" content="immobilier tokenisé, NFTs, staking, prêts crypto, blockchain Arbitrum, Legatio Finance, ROI, investissement">
+    <meta name="description" content="Legatio Finance : Investissez dans l’immobilier tokenisé dès 100$ avec des rendements passifs en 2025 via la blockchain Arbitrum.">
+    <meta name="keywords" content="immobilier tokenisé, NFTs, staking, prêts crypto, blockchain, Legatio Finance, ROI, sécurité">
     <meta name="author" content="Legatio Finance Team">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Legatio Finance - L'Avenir de l'Investissement Immobilier">
@@ -27,22 +27,25 @@
         gtag('js', new Date());
         gtag('config', 'UA-XXXXX-Y');
     </script>
+
+    <!-- Définitions SVG pour les icônes -->
+    <svg style="display: none;">
+        <symbol id="icon-x" viewBox="0 0 24 24">
+            <path fill="#f1c40f" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </symbol>
+        <symbol id="icon-discord" viewBox="0 0 24 24">
+            <path fill="#f1c40f" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.433-.426.83-.6358 1.2429a18.2507 18.2507 0 00-5.4877 0c-.2098-.4129-.4248-.8099-.6358-1.2429a.075.075 0 00-.0785-.037 19.736 19.736 0 00-4.8852 1.515.0699.0699 0 00-.032.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561 19.92 19.92 0 005.9933 3.03.078.078 0 00.0845-.0285c.4626-.6304.8747-1.2952 1.2268-1.9922a.076.076 0 00-.0419-.1057 13.069 13.069 0 01-1.872-.8925.077.077 0 01-.0087-.1272c.1258-.0944.2517-.1923.3718-.2914a.0743.0743 0 01.0772-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0775.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1272 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.771.9628 1.2314 1.9912a.076.076 0 00.084-.0285 19.8316 19.8316 0 005.993-3.0299.0779.0779 0 00.0319-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1469-1.0857-2.1469-2.4241s.964-2.4241 2.1469-2.4241 2.145 1.0857 2.145 2.4241c.0001 1.3384-.9629 2.4241-2.145 2.4241zm7.958 0c-1.1825 0-2.1469-1.0857-2.1469-2.4241s.964-2.4241 2.1469-2.4241 2.145 1.0857 2.145 2.4241c.0001 1.3384-.9628 2.4241-2.145 2.4241z"/>
+        </symbol>
+    </svg>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <button class="navbar-toggle" aria-label="Ouvrir le menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="navbar-toggle" aria-label="Ouvrir le menu"><i class="fas fa-bars"></i></button>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li class="dropdown">
-                    <a href="#">Solutions</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#use-cases">Cas d'Usage</a></li>
-                        <li><a href="#token-nfts">Token & NFTs</a></li>
-                    </ul>
-                </li>
+                <li><a href="#start">Accueil</a></li>
+                <li><a href="#use-cases">Solutions</a></li>
+                <li><a href="#token-nfts">Token & NFTs</a></li>
                 <li><a href="#roadmap">Roadmap</a></li>
                 <li><a href="#team">Équipe</a></li>
                 <li><a href="#investors">Investir</a></li>
@@ -54,120 +57,127 @@
     <header class="header">
         <div class="header-content">
             <h1>Legatio Finance</h1>
-            <p style="margin-bottom: 25px;">L’avenir de l’investissement immobilier tokenisé. Investissez dans l’immobilier tokenisé dès 100$ avec des rendements passifs en 2025 via la blockchain Arbitrum.</p>
-            <a href="#investors" class="cta-button">Investir Maintenant</a>
-            <a href="#use-cases" class="cta-secondary">Voir les Opportunités</a>
+            <p>L’avenir de l’investissement immobilier tokenisé</p>
+            <a href="#investors" class="cta-button" aria-label="Investir maintenant">Investir Maintenant</a>
+            <a href="#use-cases" class="cta-button cta-secondary" aria-label="Voir les opportunités">Voir les Opportunités</a>
         </div>
     </header>
 
-    <section id="start" class="section">
-        <div class="container">
+    <div class="container">
+        <section id="start" class="section start-section">
             <h2>Bienvenue chez Legatio Finance</h2>
             <p style="margin-bottom: 25px;">Legatio Finance est une plateforme innovante de prêt et d’investissement sur la blockchain Arbitrum, adossée à des actifs immobiliers tokenisés.</p>
+            <p style="margin-bottom: 25px;">Avec Legatio, vous pouvez :</p>
             <ul style="margin-bottom: 25px;">
                 <li>✅ Investir dans des actifs réels sous forme de tokens.</li>
                 <li>✅ Utiliser vos biens tokenisés comme collatéral pour emprunter des stablecoins.</li>
                 <li>✅ Accéder à une finance plus transparente et décentralisée.</li>
             </ul>
-            <a href="#investors" class="cta-button">Investir Maintenant</a>
-        </div>
-    </section>
+            <div style="margin-top: 25px;">
+                <a href="#investors" class="cta-button" aria-label="Investir maintenant">Investir Maintenant</a>
+            </div>
+        </section>
 
-    <section id="future" class="future-section">
-        <div class="container">
-            <h2>Accédez à l’immobilier de demain</h2>
-            <p>Découvrez une nouvelle façon d’investir dans l’immobilier grâce à la technologie blockchain, sans les contraintes traditionnelles.</p>
-            <img src="assets/images/future-vision.jpg" alt="Vision futuriste de l'immobilier tokenisé" class="future-image">
-            <a href="#why-invest" class="cta-button">Découvrir</a>
+        <div class="section future-section">
+            <h2>Accédez à l’immobilier de demain, sans les contraintes traditionnelles.</h2>
+            <p>Découvrez une nouvelle façon d’investir dans l’immobilier grâce à la technologie blockchain.</p>
+            <a href="#investors" class="cta-button" aria-label="Découvrir">Découvrir</a>
         </div>
-    </section>
 
-    <section id="before-after" class="section">
-        <div class="container">
+        <div class="section before-after">
             <h2>Avant et Après</h2>
-            <div class="before-after">
+            <div class="before-after-content">
                 <div class="before">
-                    <h3>Avant Legatio <span>❌</span></h3>
+                    <h3><span style="color: #e74c3c;">❌ Avant</span></h3>
                     <ul>
                         <li>Accès limité par les banques.</li>
                         <li>Capital élevé requis.</li>
                         <li>Processus lent.</li>
                     </ul>
-                    <img src="assets/images/before-investing.jpg" alt="Avant Legatio - Investissement traditionnel" class="before-image">
                 </div>
                 <div class="after">
-                    <h3>Avec Legatio <span>✅</span></h3>
+                    <h3><span style="color: #2ecc71;">✅ Après</span></h3>
                     <ul>
                         <li>Accès via blockchain.</li>
                         <li>Investissement dès 100$.</li>
                         <li>Processus rapide.</li>
                     </ul>
-                    <img src="assets/images/after-investing.jpg" alt="Avec Legatio - Investissement tokenisé" class="after-image">
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="why-invest" class="section why-invest">
-        <div class="container">
+        <div class="section why-invest">
             <h2>Pourquoi Investir avec Legatio ?</h2>
             <div class="invest-benefits">
                 <div class="benefit-item">
                     <i class="fas fa-chart-line"></i>
                     <h3>ROI Élevé</h3>
                     <p>Jusqu’à 7% annuel avec staking.</p>
-                    <canvas class="benefit-graph" id="roi-graph"></canvas>
                 </div>
                 <div class="benefit-item">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Sécurité</h3>
                     <p>Audits CertiK et conformité KYC/AML.</p>
-                    <canvas class="benefit-graph" id="security-graph"></canvas>
                 </div>
                 <div class="benefit-item">
-                    <i class="fas fa-eye"></i>
+                    <i class="fas fa-lock"></i>
                     <h3>Transparence</h3>
                     <p>Basé sur la blockchain Arbitrum.</p>
-                    <canvas class="benefit-graph" id="transparency-graph"></canvas>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="use-cases" class="section use-cases">
-        <div class="container">
+        <div id="use-cases" class="section use-cases">
             <h2>Cas d’Usage</h2>
             <p>Découvrez comment les immeubles tokenisés transforment votre investissement.</p>
             <div class="use-cases-content">
                 <div class="use-case-item">
-                    <h3>Rendements Passifs</h3>
+                    <h3>Rendements Passifs <i class="fas fa-dollar-sign"></i></h3>
                     <p>Les revenus locatifs sont redistribués aux détenteurs de tokens sous forme de dividendes mensuels.</p>
-                    <img src="assets/images/passive-income.png" alt="Graphique des rendements passifs" class="use-case-image">
-                    <a href="#opportunities" class="cta-button">Voir les Opportunités</a>
+                    <div class="graph-container">
+                        <iframe src="graphique.html#rendement-graph" frameborder="0" title="Graphique des rendements passifs" alt="Graphique des rendements passifs"></iframe>
+                    </div>
+                    <a href="#investors" class="cta-button cta-secondary" aria-label="Voir les opportunités">Voir les Opportunités</a>
                 </div>
                 <div class="use-case-item">
-                    <h3>Collatéral pour Prêts</h3>
+                    <h3>Collatéral pour Prêts <i class="fas fa-shield-alt"></i></h3>
                     <p>Utilisez vos tokens comme garantie pour emprunter des stablecoins à des taux compétitifs.</p>
                     <div class="graph-container">
-                        <canvas class="collateral-graph"></canvas>
+                        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" class="collateral-graph" alt="Graphique des prêts collatéraux">
+                            <line x1="50" y1="250" x2="450" y2="250" stroke="black" stroke-width="2"/>
+                            <line x1="50" y1="250" x2="50" y2="50" stroke="black" stroke-width="2"/>
+                            <line x1="50" y1="200" x2="450" y2="200" stroke="#ccc" stroke-dasharray="5,5"/>
+                            <line x1="50" y1="150" x2="450" y2="150" stroke="#ccc" stroke-dasharray="5,5"/>
+                            <line x1="50" y1="100" x2="450" y2="100" stroke="#ccc" stroke-dasharray="5,5"/>
+                            <path class="collateral-line" d="M50,230 Q100,180 150,190 T250,140 T350,160 T450,120" fill="none" stroke="#3498db" stroke-width="3"/>
+                            <path class="yield-line" d="M50,220 Q100,160 150,170 T250,130 T350,150 T450,110" fill="none" stroke="#f1c40f" stroke-width="3"/>
+                            <rect x="300" y="20" width="140" height="50" fill="white" stroke="black"/>
+                            <circle cx="320" cy="35" r="5" fill="#3498db" class="legend-circle"/>
+                            <text x="335" y="38" font-size="12" font-family="'Roboto', sans-serif" fill="#34495e">Flux de Collatéral</text>
+                            <circle cx="320" cy="55" r="5" fill="#f1c40f" class="legend-circle"/>
+                            <text x="335" y="58" font-size="12" font-family="'Roboto', sans-serif" fill="#34495e">Rendement (%)</text>
+                            <text x="10" y="150" font-size="14" font-family="'Roboto', sans-serif" fill="black" transform="rotate(-90, 10, 150)">Valeur ($)</text>
+                            <text x="225" y="270" font-size="14" font-family="'Roboto', sans-serif" fill="black">Temps</text>
+                        </svg>
                     </div>
-                    <a href="#opportunities" class="cta-button">Voir les Opportunités</a>
-                </div>
-                <div class="use-case-item">
-                    <h3>Comment un bien est tokenisé ?</h3>
-                    <ol>
-                        <li>Acquisition</li>
-                        <li>Tokenisation</li>
-                        <li>Vente de Tokens</li>
-                    </ol>
-                    <img src="assets/images/tokenization-process.png" alt="Processus de tokenisation" class="use-case-image">
+                    <a href="#investors" class="cta-button cta-secondary" aria-label="Voir les opportunités">Voir les Opportunités</a>
                 </div>
             </div>
+            <div class="tokenization-schema">
+                <h3>Comment un bien est tokenisé ?</h3>
+                <svg width="800" height="250" xmlns="http://www.w3.org/2000/svg" alt="Schéma de tokenisation immobilière" class="tokenization-diagram">
+                    <rect x="150" y="50" width="150" height="70" fill="#3498db" rx="10" class="token-step" />
+                    <text x="225" y="80" text-anchor="middle" fill="white" font-size="16">1. Acquisition</text>
+                    <rect x="350" y="50" width="150" height="70" fill="#3498db" rx="10" class="token-step" />
+                    <text x="425" y="80" text-anchor="middle" fill="white" font-size="16">2. Tokenisation</text>
+                    <rect x="550" y="50" width="150" height="70" fill="#3498db" rx="10" class="token-step" />
+                    <text x="625" y="80" text-anchor="middle" fill="white" font-size="16">3. Vente de Tokens</text>
+                    <path d="M275 85 Q300 85 300 120 T350 155 T550 155 T600 120 T625 85" stroke="#f1c40f" stroke-width="3" fill="none" class="token-path" />
+                </svg>
+            </div>
         </div>
-    </section>
 
-    <section id="token-nfts" class="section token-nfts">
-        <div class="container">
+        <div id="token-nfts" class="section token-nfts">
             <h2>Token LEG & NFTs</h2>
             <div class="token-section">
                 <h3>Token LEG</h3>
@@ -177,127 +187,109 @@
                     <li>Générer des rendements via staking (jusqu’à 5-7% annuel).</li>
                     <li>Participer à la gouvernance.</li>
                 </ul>
-                <p><strong>Tokenomics :</strong> Total Supply : 100 000 000 LEG<br>
-                Distribution : 40% Staking, 25% Liquidité, 20% Développement, 10% Équipe, 5% Partenariats.</p>
-                <canvas class="token-graph" id="tokenomics-graph"></canvas>
-                <a href="#investors" class="cta-button">Investir Maintenant</a>
+                <p><strong>Tokenomics :</strong> Total Supply : 100 000 000 LEG<br>Distribution : 40% Staking, 25% Liquidité, 20% Développement, 10% Équipe, 5% Partenariats.</p>
+                <a href="#investors" class="cta-button cta-secondary" aria-label="Investir maintenant">Investir Maintenant</a>
             </div>
             <div class="nfts-section">
                 <h3>NFTs Legatio</h3>
-                <p>Collection "Legatio Genesis" : 1 000 NFTs uniques sur Arbitrum.</p>
-                <p>Prix de Mint : 0.2 ETH | Lancement : Q3 2025.</p>
+                <p>Collection "Legatio Genesis" : 1 000 NFTs uniques sur Arbitrum.<br>Prix de Mint : 0.2 ETH<br>Lancement : Q3 2025.</p>
                 <p>Avantages : Frais réduits, accès anticipé, gouvernance.</p>
-                <img src="assets/images/nft-collection.jpg" alt="Collection NFT Legatio Genesis" class="nft-image">
-                <a href="#opportunities" class="cta-button">Voir les Opportunités</a>
+                <a href="#investors" class="cta-button cta-secondary" aria-label="Voir les opportunités">Voir les Opportunités</a>
             </div>
         </div>
-    </section>
 
-    <section id="roadmap" class="section roadmap">
-        <div class="container">
+        <div id="roadmap" class="section roadmap">
             <h2>Roadmap</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <h3>Phase 1</h3>
-                    <p>Développement du protocole Legatio - Q2 2024</p>
-                    <img src="assets/images/roadmap-phase1.jpg" alt="Développement du protocole" class="roadmap-image">
+                    <p>Développement du protocole Legatio<br><strong>Q2 2024</strong></p>
                 </div>
                 <div class="timeline-item">
                     <h3>Phase 2</h3>
-                    <p>Tokenisation des premiers immeubles - Q3 2024</p>
-                    <img src="assets/images/roadmap-phase2.jpg" alt="Tokenisation des immeubles" class="roadmap-image">
+                    <p>Tokenisation des premiers immeubles<br><strong>Q3 2024</strong></p>
                 </div>
                 <div class="timeline-item">
                     <h3>Phase 3</h3>
-                    <p>Lancement du Token LEG & Staking - Q4 2024</p>
-                    <img src="assets/images/roadmap-phase3.jpg" alt="Lancement du Token LEG" class="roadmap-image">
+                    <p>Lancement du Token LEG & Staking<br><strong>Q4 2024</strong></p>
                 </div>
                 <div class="timeline-item">
                     <h3>Phase 4</h3>
-                    <p>Déploiement des prêts adossés à RWA - Q1 2025</p>
-                    <img src="assets/images/roadmap-phase4.jpg" alt="Prêts adossés à RWA" class="roadmap-image">
+                    <p>Déploiement des prêts adossés à RWA<br><strong>Q1 2025</strong></p>
                 </div>
                 <div class="timeline-item">
                     <h3>Phase 5</h3>
-                    <p>Expansion internationale & adoption - 2025-2026</p>
-                    <img src="assets/images/roadmap-phase5.jpg" alt="Expansion internationale" class="roadmap-image">
+                    <p>Expansion internationale & adoption<br><strong>2025-2026</strong></p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="team" class="section team">
-        <div class="container">
-            <h2>Notre Équipe</h2>
+        <div id="team" class="section team">
+            <h2>Équipe</h2>
             <div class="team-section">
                 <div class="team-member">
-                    <div class="team-image"></div>
                     <h3>Rodrigues Delmar</h3>
-                    <p>Co-fondateur & CEO - Expert en trading crypto & blockchain.</p>
+                    <p>Co-fondateur & CEO<br>Expert en trading crypto & blockchain</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-image"></div>
                     <h3>Alexandre Perez</h3>
-                    <p>CTO - Ingénieur blockchain spécialisé en smart contracts.</p>
+                    <p>CTO<br>Ingénieur blockchain spécialisé en smart contracts</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-image"></div>
                     <h3>Marie Balsan</h3>
-                    <p>COO - Experte en régulation et conformité crypto.</p>
+                    <p>COO<br>Experte en régulation et conformité crypto</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="simulator" class="section">
-        <div class="container">
+        <div class="section simulator">
             <h2>Simulateur de Prêt</h2>
-            <div class="simulator">
-                <form class="simulator-form">
-                    <label for="loan-amount">Montant du prêt ($):</label>
-                    <input type="number" id="loan-amount" placeholder="1000" min="100" required>
-                    <label for="loan-duration">Durée (mois):</label>
-                    <input type="number" id="loan-duration" placeholder="12" min="1" max="24" required>
-                    <button type="submit">Calculer</button>
-                </form>
-                <p>Rendement estimé : <span id="loan-result">0 USDT</span></p>
+            <div class="simulator-form">
+                <label for="propertyValue">Valeur du Bien Tokenisé (USDT) :</label>
+                <input type="number" id="propertyValue" value="10000" required>
+                <label for="loanAmount">Montant du Prêt (USDT) :</label>
+                <input type="number" id="loanAmount" value="5000" required>
+                <label for="loanDuration">Durée (mois) :</label>
+                <input type="number" id="loanDuration" value="12" required>
+                <button id="calculateLoanBtn" aria-label="Calculer le prêt">Calculer</button>
             </div>
+            <p>Rendement estimé : <span id="loanResult">0 USDT</span></p>
         </div>
-    </section>
 
-    <section id="swap" class="section">
-        <div class="container">
+        <div class="section swap">
             <h2>Échange RWA ↔ Stablecoins</h2>
-            <div class="swap">
-                <select id="swap-from">
-                    <option value="rwa">RWA</option>
-                    <option value="usdt">USDT</option>
-                </select>
-                <input type="number" id="swap-amount" placeholder="100" min="0" required>
-                <select id="swap-to">
-                    <option value="usdt">USDT</option>
-                    <option value="rwa">RWA</option>
-                </select>
-                <button type="button" id="swap-button">Échanger</button>
-                <p>Résultat : <span id="swap-result">0</span></p>
-            </div>
+            <select id="fromToken">
+                <option value="rwa">RWA Token</option>
+                <option value="usdt">USDT</option>
+            </select>
+            <input type="number" id="amount" placeholder="Montant">
+            <select id="toToken">
+                <option value="usdt">USDT</option>
+                <option value="rwa">RWA Token</option>
+            </select>
+            <button id="swapTokensBtn" aria-label="Échanger">Échanger</button>
+            <p>Résultat : <span id="swapResult">0</span></p>
         </div>
-    </section>
 
-    <section id="investors" class="section investors">
-        <div class="container">
+        <div class="section crypto-prices">
+            <h2>Prix en Direct</h2>
+            <p id="btcPrice"></p>
+            <p id="goldPrice"></p>
+            <p id="silverPrice"></p>
+        </div>
+
+        <div id="investors" class="section investors">
             <h2>Pour les Investisseurs</h2>
-            <p>Explorez notre vision innovante pour transformer l’immobilier avec la blockchain.</p>
+            <p>Explorez notre vision innovante.</p>
             <div class="investor-buttons">
-                <img src="assets/images/investor-vision.jpg" alt="Vision pour les investisseurs" class="investor-image">
-                <a href="#contact" class="cta-button">Investir Maintenant</a>
-                <a href="#why-invest" class="cta-secondary">En savoir plus</a>
+                <a href="./PitchDeck.pdf" class="cta-button" target="_blank" aria-label="Télécharger le Pitch Deck">Pitch Deck</a>
+                <a href="./WhitePaper.pdf" class="cta-button" target="_blank" aria-label="Télécharger le White Paper">White Paper</a>
+                <a href="#" class="cta-button" id="open-demo-modal" aria-label="Demander une démo">Demander une Démo</a>
             </div>
+            <a href="#start" class="cta-button cta-secondary" aria-label="Investir maintenant" style="margin-top: 20px; display: block;">Investir Maintenant</a>
         </div>
-    </section>
 
-    <section id="faq" class="section faq">
-        <div class="container">
+        <div class="section faq">
             <h2>FAQ - Questions sur les RWA</h2>
             <div class="faq-list">
                 <details>
@@ -318,45 +310,61 @@
                 </details>
             </div>
         </div>
-    </section>
 
-    <section id="testimonials" class="section testimonials">
-        <div class="container">
+        <div class="section testimonials">
             <h2>Ils parlent de nous</h2>
             <div class="testimonial-list">
                 <p>"Legatio Finance redéfinit l’investissement immobilier avec la blockchain." - Marc T., Expert Crypto</p>
                 <p>"Une solution simple et sécurisée pour diversifier mon portefeuille crypto." - Sophie R., Investisseuse</p>
-                <img src="assets/images/testimonial-bg.jpg" alt="Image de fond des témoignages" class="testimonial-image">
             </div>
             <div class="partner-logos">
-                <span>Nos partenaires :</span>
-                <img src="assets/images/partner1.png" alt="Partenaire 1" class="partner-logo">
-                <img src="assets/images/partner2.png" alt="Partenaire 2" class="partner-logo">
+                <span>Nos partenaires</span>
+                <a href="https://www.lbank.com/" target="_blank" aria-label="Logo LBank" alt="Logo LBank">
+                    <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" class="partner-logo">
+                        <text x="10" y="35" font-family="sans-serif" font-size="20" fill="#0A66C2">L</text>
+                        <text x="25" y="35" font-family="sans-serif" font-size="20" fill="#FFD700">B</text>
+                        <path d="M28 20 L33 20 L30.5 25 L33 30 L28 30 Z M28 30 L33 30 L30.5 25 L33 20 L28 20" fill="#000000"/>
+                        <text x="40" y="35" font-family="sans-serif" font-size="20" fill="#0A66C2">ank</text>
+                    </svg>
+                </a>
+                <a href="https://chain.link/" target="_blank" aria-label="Logo Chainlink" alt="Logo Chainlink">
+                    <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" class="partner-logo">
+                        <polygon points="10,15 25,5 40,15 40,35 25,45 10,35" fill="none" stroke="#375BD2" stroke-width="4"/>
+                        <text x="50" y="35" font-family="sans-serif" font-size="20" fill="#375BD2">Chainlink</text>
+                    </svg>
+                </a>
             </div>
-            <div class="certifications">Audité par CertiK | Conforme KYC/AML</div>
+            <p class="certifications">Audité par CertiK | Conforme KYC/AML</p>
         </div>
-    </section>
 
-    <section id="stay-informed" class="section stay-informed">
-        <div class="container">
+        <!-- Section "Rejoignez la Révolution" fusionnée -->
+        <div class="section stay-informed">
             <h2>Rejoignez la Révolution</h2>
             <p>Inscrivez-vous pour nos mises à jour.</p>
             <div class="stay-informed-actions">
-                <form id="newsletter-form">
-                    <input type="email" placeholder="Votre email" required>
-                    <button type="submit" class="cta-button">S'inscrire</button>
-                </form>
+                <a href="https://forms.zoho.eu/legatiofinancegm1/form/FormationLegatio" class="cta-button" target="_blank" aria-label="S’inscrire">S’inscrire</a>
             </div>
-        </div>
-    </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contactez-Nous</h2>
-            <p>Contactez-nous : <a href="mailto:contact@legatio.finance">contact@legatio.finance</a></p>
+            <!-- Barre de navigation ajoutée -->
+            <nav class="navbar">
+                <div class="container">
+                    <button class="navbar-toggle" aria-label="Ouvrir le menu"><i class="fas fa-bars"></i></button>
+                    <ul>
+                        <li><a href="#start">Accueil</a></li>
+                        <li><a href="#use-cases">Solutions</a></li>
+                        <li><a href="#token-nfts">Token & NFTs</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                        <li><a href="#team">Équipe</a></li>
+                        <li><a href="#investors">Investir</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="https://discord.gg/UQz9mtev" target="_blank">Discord</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </section>
+    </div>
 
+        <!-- Remplacer la section .footer-social-links dans le <footer> par une div indépendante -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-links">
@@ -370,6 +378,7 @@
                 <a href="#team">Équipe</a>
                 <a href="#simulator">Simulateur</a>
                 <a href="#swap">Swap</a>
+                <a href="#crypto-prices">Prix Crypto</a>
                 <a href="#investors">Investisseurs</a>
                 <a href="#faq">FAQ</a>
                 <a href="#testimonials">Témoignages</a>
@@ -387,14 +396,15 @@
         </div>
     </footer>
 
+    <!-- Nouvelle div pour les icônes sociales en bas à droite -->
     <div class="social-icons">
         <a href="https://x.com/rdb_legend" target="_blank" aria-label="Suivez-nous sur X">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="#f1c40f" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg>
         </a>
         <a href="https://discord.com/channels/1347668715357077577/1347668716120182888" target="_blank" aria-label="Rejoignez notre serveur Discord">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="#f1c40f" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.433-.426.83-.6358 1.2429a18.2507 18.2507 0 00-5.4877 0c-.2098-.4129-.4248-.8099-.6358-1.2429a.075.075 0 00-.0785-.037 19.736 19.736 0 00-4.8852 1.515.0699.0699 0 00-.032.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561 19.92 19.92 0 005.9933 3.03.078.078 0 00.0845-.0285c.4626-.6304.8747-1.2952 1.2268-1.9922a.076.076 0 00-.0419-.1057 13.069 13.069 0 01-1.872-.8925.077.077 0 01-.0087-.1272c.1258-.0944.2517-.1923.3718-.2914a.0743.0743 0 01.0772-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0775.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1272 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.771.9628 1.2314 1.9912a.076.076 0 00.084-.0285 19.8316 19.8316 0 005.993-3.0299.0779.0779 0 00.0319-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1469-1.0857-2.1469-2.4241s.964-2.4241 2.1469-2.4241 2.145 1.0857 2.145 2.4241c.0001 1.3384-.9629 2.4241-2.145 2.4241zm7.958 0c-1.1825 0-2.1469-1.0857-2.1469-2.4241s.964-2.4241 2.1469-2.4241 2.145 1.0857 2.145 2.4241c.0001 1.3384-.9628 2.4241-2.145 2.4241z"/>
             </svg>
         </a>
@@ -406,117 +416,46 @@
             document.querySelector('.navbar ul').classList.toggle('active');
         });
 
-        // Simulateur de prêt
+        // Simulateur
         document.querySelector('.simulator-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const amount = document.getElementById('loan-amount').value || 1000;
-            const duration = document.getElementById('loan-duration').value || 12;
-            const interest = (amount * 0.05 * duration / 12).toFixed(2); // 5% annuel
-            document.getElementById('loan-result').textContent = `${interest} USDT`;
+            const amount = document.getElementById('amount').value || 100;
+            const duration = document.getElementById('duration').value || 12;
+            const result = (amount * 0.05 * duration / 12).toFixed(2); // Rendement mensuel
+            document.getElementById('result').textContent = `$${result} par mois de rendement estimé`;
         });
 
-        // Échange RWA ↔ Stablecoins
-        document.getElementById('swap-button').addEventListener('click', function() {
-            const amount = document.getElementById('swap-amount').value || 0;
-            const rate = 0.95; // Taux fictif
+        // Swap
+        document.querySelector('.swap button').addEventListener('click', function() {
+            const amount = document.querySelector('.swap input').value || 0;
+            const rate = 0.95; // Taux fictif ETH -> USDT
             const result = (amount * rate).toFixed(2);
-            document.getElementById('swap-result').textContent = `${result} ${document.getElementById('swap-to').value.toUpperCase()}`;
+            document.getElementById('swap-result').textContent = `${result} tokens reçus`;
         });
 
-        // Graphiques Chart.js
-        const ctxCollateral = document.querySelector('.collateral-graph').getContext('2d');
-        new Chart(ctxCollateral, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr'],
-                datasets: [{
-                    label: 'Rendement (%)',
-                    data: [2, 3, 5, 4],
-                    borderColor: '#f1c40f',
-                    tension: 0.1,
-                    fill: true,
-                    backgroundColor: 'rgba(241, 196, 15, 0.2)'
-                }]
-            },
-            options: { responsive: true }
-        });
-
-        const ctxRoi = document.getElementById('roi-graph').getContext('2d');
-        new Chart(ctxRoi, {
-            type: 'bar',
-            data: {
-                labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-                datasets: [{
-                    label: 'ROI (%)',
-                    data: [5, 6, 7, 6.5],
-                    backgroundColor: '#2ecc71',
-                    borderColor: '#27ae60',
-                    borderWidth: 1
-                }]
-            },
-            options: { responsive: true }
-        });
-
-        const ctxSecurity = document.getElementById('security-graph').getContext('2d');
-        new Chart(ctxSecurity, {
-            type: 'doughnut',
-            data: {
-                labels: ['Audits', 'KYC/AML', 'Smart Contracts'],
-                datasets: [{
-                    data: [40, 30, 30],
-                    backgroundColor: ['#3498db', '#e74c3c', '#9b59b6'],
-                    borderWidth: 1
-                }]
-            },
-            options: { responsive: true }
-        });
-
-        const ctxTransparency = document.getElementById('transparency-graph').getContext('2d');
-        new Chart(ctxTransparency, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar'],
-                datasets: [{
-                    label: 'Transactions',
-                    data: [100, 150, 200],
-                    borderColor: '#f1c40f',
-                    tension: 0.1,
-                    fill: true,
-                    backgroundColor: 'rgba(241, 196, 15, 0.2)'
-                }]
-            },
-            options: { responsive: true }
-        });
-
-        const ctxTokenomics = document.getElementById('tokenomics-graph').getContext('2d');
-        new Chart(ctxTokenomics, {
-            type: 'pie',
-            data: {
-                labels: ['Staking', 'Liquidité', 'Développement', 'Équipe', 'Partenariats'],
-                datasets: [{
-                    data: [40, 25, 20, 10, 5],
-                    backgroundColor: ['#2ecc71', '#3498db', '#e74c3c', '#9b59b6', '#f1c40f'],
-                    borderWidth: 1
-                }]
-            },
-            options: { responsive: true }
-        });
+        // Prix crypto
+        async function fetchPrices() {
+            try {
+                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gold,ethereum&vs_currencies=usd');
+                const data = await response.json();
+                document.getElementById('btcPrice').textContent = `BTC: $${data.bitcoin?.usd || 'N/A'}`;
+                document.getElementById('goldPrice').textContent = `Or: $${data.gold?.usd || 'N/A'}`;
+                document.getElementById('silverPrice').textContent = `Argent: $${data.ethereum?.usd * 0.05 || 'N/A'}`; // Proxy fictif
+            } catch (error) {
+                console.error("Erreur lors de la récupération des prix:", error);
+                document.getElementById('btcPrice').textContent = 'BTC: N/A';
+                document.getElementById('goldPrice').textContent = 'Or: N/A';
+                document.getElementById('silverPrice').textContent = 'Argent: N/A';
+            }
+        }
+        fetchPrices();
+        setInterval(fetchPrices, 300000); // Mise à jour toutes les 5 minutes
 
         // Newsletter
         document.getElementById('newsletter-form').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Merci de vous être inscrit ! Vous recevrez bientôt nos nouvelles.');
             this.reset();
-        });
-
-        // GSAP Animations
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from(".section", {
-            scrollTrigger: ".section",
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            stagger: 0.2
         });
     </script>
 </body>
